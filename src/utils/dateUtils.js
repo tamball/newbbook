@@ -1,6 +1,6 @@
 import { getSettings } from './storage';
 
-// 根據週次和天數計算實際日期（每週7天）
+// Calculate actual date based on week and day (7 days per week)
 export const getActualDate = (week, day) => {
   const settings = getSettings();
   if (!settings || !settings.startDate) {
@@ -8,7 +8,7 @@ export const getActualDate = (week, day) => {
   }
 
   const startDate = new Date(settings.startDate);
-  // 每週7天，所以計算偏移量：第1週第1天 = 0，第1週第2天 = 1，第2週第1天 = 7...
+  // 7 days per week, so calculate offset: Week 1 Day 1 = 0, Week 1 Day 2 = 1, Week 2 Day 1 = 7...
   const daysOffset = (week - 1) * 7 + (day - 1);
   const currentDate = new Date(startDate);
   currentDate.setDate(startDate.getDate() + daysOffset);
@@ -16,22 +16,22 @@ export const getActualDate = (week, day) => {
   return currentDate;
 };
 
-// 獲取當前日期和星期幾
+// Get current date and day of week
 export const getCurrentDateInfo = () => {
   const today = new Date();
   return {
     date: today,
     dateStr: formatDate(today),
-    weekday: today.toLocaleDateString('zh-TW', { weekday: 'long' }),
-    dayOfWeek: today.getDay() // 0 = 星期日, 6 = 星期六
+    weekday: today.toLocaleDateString('en-US', { weekday: 'long' }),
+    dayOfWeek: today.getDay() // 0 = Sunday, 6 = Saturday
   };
 };
 
-// 格式化日期顯示
+// Format date display
 export const formatDate = (date) => {
   if (!date) return '';
   
-  return date.toLocaleDateString('zh-TW', {
+  return date.toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
@@ -39,11 +39,11 @@ export const formatDate = (date) => {
   });
 };
 
-// 格式化日期為簡短格式
+// Format date as short format
 export const formatDateShort = (date) => {
   if (!date) return '';
   
-  return date.toLocaleDateString('zh-TW', {
+  return date.toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
     day: 'numeric'

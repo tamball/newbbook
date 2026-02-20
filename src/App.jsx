@@ -13,7 +13,7 @@ function App() {
   const [showSetup, setShowSetup] = useState(false);
   const [overallProgress, setOverallProgress] = useState({ completed: 0, total: 48 });
 
-  // 更新整體進度
+  // Update overall progress
   useEffect(() => {
     if (hasSettings()) {
       const progress = getOverallProgress();
@@ -22,7 +22,7 @@ function App() {
   }, [view]);
 
   useEffect(() => {
-    // 檢查是否已有設置
+    // Check if settings exist
     try {
       console.log('Checking settings...');
       const hasSettingsValue = hasSettings();
@@ -65,7 +65,7 @@ function App() {
   };
 
   const handleResetSettings = () => {
-    if (window.confirm('確定要重置設置嗎？這將清除開始日期和屬靈導師信息，但不會刪除你的靈修記錄。')) {
+    if (window.confirm('Are you sure you want to reset settings? This will clear the start date and spiritual mentor information, but will not delete your devotional entries.')) {
       clearSettings();
       setView('setup');
       setShowSetup(true);
@@ -81,12 +81,12 @@ function App() {
       <header className="app-header">
         <div className="header-top">
           <div className="header-title">
-            <h1>🌟 初信靈修記錄</h1>
-            <p className="subtitle">8 週靈修旅程，與神同行</p>
+            <h1>🌟 New Believer Devotional</h1>
+            <p className="subtitle">8-Week Journey with God</p>
           </div>
           {hasSettings() && view !== 'setup' && (
             <button onClick={handleResetSettings} className="reset-button">
-              🔄 重置設置
+              🔄 Reset Settings
             </button>
           )}
         </div>
@@ -99,7 +99,7 @@ function App() {
               ></div>
             </div>
             <p className="overall-progress-text">
-              整體進度：{overallProgress.completed} / {overallProgress.total} 天 ({overallPercentage}%)
+              Overall Progress: {overallProgress.completed} / {overallProgress.total} days ({overallPercentage}%)
             </p>
           </div>
         )}
@@ -107,8 +107,8 @@ function App() {
 
       {view === null ? (
         <div style={{ textAlign: 'center', padding: '2rem', color: '#666', background: 'white', margin: '2rem', borderRadius: '10px' }}>
-          <h2>載入中...</h2>
-          <p>正在檢查設置...</p>
+          <h2>Loading...</h2>
+          <p>Checking settings...</p>
         </div>
       ) : showSetup ? (
         <SetupView onComplete={handleSetupComplete} />
@@ -130,7 +130,7 @@ function App() {
       )}
 
       <footer className="app-footer">
-        <p>願你在這8週的靈修中，與神建立更深的關係 ❤️</p>
+        <p>May you build a deeper relationship with God during these 8 weeks ❤️</p>
       </footer>
     </div>
   );
