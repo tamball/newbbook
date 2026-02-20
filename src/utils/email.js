@@ -3,7 +3,7 @@ import { devotionalData } from '../data/devotionalData';
 import { weekendData } from '../data/weekendData';
 import { getActualDate, formatDate } from './dateUtils';
 
-// 生成郵件內容
+// Generate email content
 export const generateEmailContent = (week, day, entry) => {
   const settings = getSettings();
   const isSunday = day === 7;
@@ -19,79 +19,79 @@ export const generateEmailContent = (week, day, entry) => {
     dayData = weekData.days.find(d => d.day === day);
   }
   
-  // 計算日期（基於開始日期，每週7天）
+  // Calculate date (based on start date, 7 days per week)
   const currentDate = getActualDate(week, day);
   const dateStr = currentDate ? formatDate(currentDate) : '';
 
-  const dayLabel = isSunday ? '星期日' : `第${day}天`;
+  const dayLabel = isSunday ? 'Sunday' : `Day ${day}`;
   
-  const subject = `第${week}週${dayLabel}靈修記錄 - ${dayData.title}`;
+  const subject = `Week ${week} ${dayLabel} Devotional Entry - ${dayData.title}`;
 
-  let body = `親愛的${settings.mentorName}，
+  let body = `Dear ${settings.mentorName},
 
-以下是我第${week}週${dayLabel}的靈修記錄：
+Below is my devotional entry for Week ${week} ${dayLabel}:
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-📅 日期：${dateStr}
-📖 主題：${dayData.title}
+📅 Date: ${dateStr}
+📖 Topic: ${dayData.title}
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`;
 
   if (isSunday) {
     body += `
 
-【聽道筆記】
-${entry.sermonNotes || '（尚未填寫）'}`;
+【Sermon Notes】
+${entry.sermonNotes || '(Not filled in yet)'}`;
   } else {
     body += `
 
-【今日經文】
+【Today's Scripture】
 ${dayData.scripture}
 
-【思考問題】
+【Reflection Question】
 ${dayData.reflectionQuestion}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-【我的靈修記錄】
+【My Devotional Entry】
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-📝 經文主要內容：
-${entry.mainContent || '（尚未填寫）'}
+📝 Main Content:
+${entry.mainContent || '(Not filled in yet)'}
 
-❤️ 個人感受：
-${entry.personalReflection || '（尚未填寫）'}
+❤️ Personal Reflection:
+${entry.personalReflection || '(Not filled in yet)'}
 
-🎯 實際應用：
-${entry.application || '（尚未填寫）'}
+🎯 Application:
+${entry.application || '(Not filled in yet)'}
 
-🙏 禱告：
-${entry.prayer || '（尚未填寫）'}`;
+🙏 Prayer:
+${entry.prayer || '(Not filled in yet)'}`;
   }
 
   body += `
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-願神祝福你！
+May God bless you!
 
-${new Date().toLocaleDateString('zh-TW')}`;
+${new Date().toLocaleDateString('en-US')}`;
 
   return { subject, body };
 };
 
-// 發送郵件（使用 mailto 鏈接）
+// Send email (using mailto link)
 export const sendEmail = (week, day, entry) => {
   const settings = getSettings();
   
   if (!settings || !settings.mentorEmail) {
-    alert('錯誤：找不到屬靈導師的電郵地址。請重新設置。');
+    alert('Error: Spiritual mentor email address not found. Please reset settings.');
     return;
   }
 
   const { subject, body } = generateEmailContent(week, day, entry);
   
-  // 使用 mailto 鏈接
+  // Use mailto link
   const mailtoLink = `mailto:${encodeURIComponent(settings.mentorEmail)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   
-  // 打開郵件客戶端
+  // Open email client
   window.location.href = mailtoLink;
 };

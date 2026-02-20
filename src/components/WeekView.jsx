@@ -11,19 +11,19 @@ const WeekView = ({ selectedWeek, onSelectWeek, onSelectDay }) => {
   const saturdayData = weekendData.saturdays.find(s => s.week === selectedWeek);
   const sundayData = weekendData.sundays.find(s => s.week === selectedWeek);
 
-  // 獲取每天的日期
+  // Get date for each day
   const getDayDate = (day) => {
     const date = getActualDate(selectedWeek, day);
     return date ? formatDate(date) : '';
   };
 
-  // 如果找不到週次資料，顯示錯誤
+  // If week data not found, show error
   if (!weekData) {
     return (
       <div className="week-view">
         <div className="week-header">
-          <h1>錯誤</h1>
-          <p>找不到第 {selectedWeek} 週的資料</p>
+          <h1>Error</h1>
+          <p>Week {selectedWeek} data not found</p>
         </div>
       </div>
     );
@@ -32,7 +32,7 @@ const WeekView = ({ selectedWeek, onSelectWeek, onSelectDay }) => {
   return (
     <div className="week-view">
       <div className="week-header">
-        <h1>第 {selectedWeek} 週</h1>
+        <h1>Week {selectedWeek}</h1>
         <div className="progress-container">
           <div className="progress-bar">
             <div className="progress-fill" style={{ width: `${(progress.completed / progress.total) * 100}%` }}></div>
@@ -47,9 +47,9 @@ const WeekView = ({ selectedWeek, onSelectWeek, onSelectDay }) => {
               </div>
             </div>
             <div className="progress-stats">
-              <p className="progress-text">{progress.completed} / {progress.total} 天已完成</p>
+              <p className="progress-text">{progress.completed} / {progress.total} days completed</p>
               {progress.completed === progress.total && (
-                <p className="progress-complete">🎉 本週完成！</p>
+                <p className="progress-complete">🎉 Week Complete!</p>
               )}
             </div>
           </div>
@@ -57,7 +57,7 @@ const WeekView = ({ selectedWeek, onSelectWeek, onSelectDay }) => {
       </div>
 
       <div className="days-grid">
-        {/* 週一到週五 */}
+        {/* Monday to Friday */}
         {weekData.days.map((dayData) => {
           const dayDate = getDayDate(dayData.day);
           const completed = isDayCompleted(selectedWeek, dayData.day);
@@ -68,8 +68,8 @@ const WeekView = ({ selectedWeek, onSelectWeek, onSelectDay }) => {
               onClick={() => onSelectDay(dayData.day)}
             >
               <div className="day-header-row">
-                <div className="day-number">第 {dayData.day} 天 {dayDate && <span className="day-date">({dayDate.split(' ')[0]})</span>}</div>
-                {completed && <span className="completion-badge">✓ 已完成</span>}
+                <div className="day-number">Day {dayData.day} {dayDate && <span className="day-date">({dayDate.split(',')[0]})</span>}</div>
+                {completed && <span className="completion-badge">✓ Completed</span>}
               </div>
               <h3 className="day-title">{dayData.title}</h3>
               <div className="day-preview">
@@ -79,36 +79,36 @@ const WeekView = ({ selectedWeek, onSelectWeek, onSelectDay }) => {
           );
         })}
         
-        {/* 星期六 */}
+        {/* Saturday */}
         {saturdayData && (
           <div
             className="day-card saturday-card"
             onClick={() => onSelectDay(6)}
           >
             <div className="day-header-row">
-              <div className="day-number">星期六 {getDayDate(6) && <span className="day-date">({getDayDate(6).split(' ')[0]})</span>}</div>
-              <span className="reading-badge">📖 閱讀日</span>
+              <div className="day-number">Saturday {getDayDate(6) && <span className="day-date">({getDayDate(6).split(',')[0]})</span>}</div>
+              <span className="reading-badge">📖 Reading Day</span>
             </div>
             <h3 className="day-title">📖 {saturdayData.title}</h3>
             <div className="day-preview">
-              整章經文閱讀，無需填寫
+              Full chapter reading, no entry required
             </div>
           </div>
         )}
 
-        {/* 星期日 */}
+        {/* Sunday */}
         {sundayData && (
           <div
             className={`day-card sunday-card ${isDayCompleted(selectedWeek, 7) ? 'completed' : ''}`}
             onClick={() => onSelectDay(7)}
           >
             <div className="day-header-row">
-              <div className="day-number">星期日 {getDayDate(7) && <span className="day-date">({getDayDate(7).split(' ')[0]})</span>}</div>
-              {isDayCompleted(selectedWeek, 7) && <span className="completion-badge">✓ 已完成</span>}
+              <div className="day-number">Sunday {getDayDate(7) && <span className="day-date">({getDayDate(7).split(',')[0]})</span>}</div>
+              {isDayCompleted(selectedWeek, 7) && <span className="completion-badge">✓ Completed</span>}
             </div>
             <h3 className="day-title">✝️ {sundayData.title}</h3>
             <div className="day-preview">
-              記錄主日崇拜聽道內容
+              Record Sunday service sermon notes
             </div>
           </div>
         )}
@@ -117,12 +117,12 @@ const WeekView = ({ selectedWeek, onSelectWeek, onSelectDay }) => {
       <div className="week-navigation">
         {selectedWeek > 1 && (
           <button onClick={() => onSelectWeek(selectedWeek - 1)} className="nav-button">
-            ← 上一週
+            ← Previous Week
           </button>
         )}
         {selectedWeek < 8 && (
           <button onClick={() => onSelectWeek(selectedWeek + 1)} className="nav-button">
-            下一週 →
+            Next Week →
           </button>
         )}
       </div>

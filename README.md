@@ -1,79 +1,79 @@
-# 初信靈修記錄 App
+# New Believer Devotional App
 
-一個專為初信耶穌的人設計的靈修記錄應用程式，包含8週、每週7天的靈修內容（週一到週五靈修記錄，星期六整章經文閱讀，星期日聽道筆記）。
+A devotional journaling app designed for new believers in Jesus, featuring 8 weeks of content with 7 days per week (Monday-Friday devotional entries, Saturday full chapter reading, Sunday sermon notes).
 
-## 功能特色
+## Features
 
-- 📅 **8週靈修計劃**：完整的8週靈修旅程（每週7天）
-- 📖 **每日經文**：40段精心挑選的經文，幫助初信者成長
-- 💭 **思考問題**：引導深入思考的問題
-- 📝 **個人記錄**：四個記錄欄位
-  - 經文主要內容
-  - 個人感受
-  - 實際應用
-  - 禱告
-- 📖 **星期六整章經文**：每週六提供整章經文閱讀，無需填寫
-- ✝️ **星期日聽道筆記**：記錄主日崇拜的聽道內容
-- 📧 **發送給屬靈導師**：可將靈修記錄發送給屬靈導師
-- 💾 **自動儲存**：使用 localStorage 自動儲存所有記錄
-- 📊 **進度追蹤**：視覺化進度顯示，包括整體進度條形圖
-- 🎨 **現代化 UI**：美觀易用的響應式介面設計
+- 📅 **8-Week Devotional Plan**: Complete 8-week journey (7 days per week)
+- 📖 **Daily Scripture**: 40 carefully selected Bible passages to help new believers grow
+- 💭 **Reflection Questions**: Thought-provoking questions to guide deeper reflection
+- 📝 **Personal Journaling**: Four entry fields
+  - Main Content
+  - Personal Reflection
+  - Application
+  - Prayer
+- 📖 **Saturday Full Chapter Reading**: Full chapter reading each Saturday, no entry required
+- ✝️ **Sunday Sermon Notes**: Record Sunday service sermon content
+- 📧 **Send to Spiritual Mentor**: Send devotional entries to your spiritual mentor
+- 💾 **Auto-Save**: All entries automatically saved using localStorage
+- 📊 **Progress Tracking**: Visual progress display including overall progress bar chart
+- 🎨 **Modern UI**: Beautiful, responsive interface design
 
-## 安裝與執行
+## Installation & Running
 
-1. 安裝依賴：
+1. Install dependencies:
 ```bash
 npm install
 ```
 
-2. 啟動開發伺服器：
+2. Start development server:
 ```bash
 npm run dev
 ```
 
-3. 在瀏覽器中打開顯示的網址（通常是 http://localhost:5173）
+3. Open the displayed URL in your browser (usually http://localhost:5173)
 
-## 建置生產版本
+## Build for Production
 
 ```bash
 npm run build
 ```
 
-建置後的檔案會在 `dist` 目錄中。
+Built files will be in the `dist` directory.
 
-## 技術棧
+## Tech Stack
 
 - React 18
 - Vite
 - CSS3
-- LocalStorage（資料持久化）
+- LocalStorage (data persistence)
 
-## 使用說明
+## Usage Instructions
 
-1. **首次設置**：
-   - 輸入開始日期（必須是星期一，預設為下一個星期一）
-   - 輸入屬靈導師姓名和電郵地址
+1. **Initial Setup**:
+   - Enter start date (must be a Monday, defaults to next Monday)
+   - Enter spiritual mentor name and email address
 
-2. **每日靈修**（週一到週五）：
-   - 選擇週次和日期
-   - 閱讀當天的經文和思考問題
-   - 在四個欄位中記錄你的靈修得著
-   - 內容會自動儲存
+2. **Daily Devotionals** (Monday-Friday):
+   - Select week and day
+   - Read the day's scripture and reflection question
+   - Record your devotional insights in four fields
+   - Content is automatically saved
 
-3. **星期六**：
-   - 閱讀整章經文
-   - 無需填寫任何內容
+3. **Saturday**:
+   - Read full chapter scripture
+   - No entry required
 
-4. **星期日**：
-   - 記錄主日崇拜的聽道筆記
+4. **Sunday**:
+   - Record Sunday service sermon notes
 
-5. **發送記錄**：
-   - 點擊「發送給屬靈導師」按鈕
-   - 會打開郵件客戶端，自動填入內容
+5. **Send Entries**:
+   - Click "Send to Mentor" button
+   - Opens email client with pre-filled content
 
-## 資料結構
+## Data Structure
 
-所有靈修記錄都儲存在瀏覽器的 localStorage 中，即使關閉瀏覽器也不會遺失。資料格式為：
+All devotional entries are stored in the browser's localStorage and will not be lost even after closing the browser. Data format:
 
 ```json
 {
@@ -89,12 +89,12 @@ npm run build
 }
 ```
 
-## 注意事項
+## Notes
 
-- 資料儲存在瀏覽器的 localStorage 中
-- 清除瀏覽器資料會導致記錄遺失
-- 建議定期備份重要記錄
+- Data is stored in the browser's localStorage
+- Clearing browser data will result in loss of entries
+- Recommend regular backup of important entries
 
-## 授權
+## License
 
-此專案為個人靈修使用而設計。
+This project is designed for personal devotional use.
