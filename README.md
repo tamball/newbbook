@@ -61,7 +61,6 @@ npm run deploy
 然後在 GitHub 倉庫的 Settings > Pages 中設置 `gh-pages` 分支為源。
 
 詳見 [DEPLOY.md](./DEPLOY.md) 了解更多部署選項。
-
 ## Tech Stack
 
 - React 18
