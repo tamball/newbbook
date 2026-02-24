@@ -1,105 +1,105 @@
-// Weekly Saturday and Sunday content
+// 每週星期六和星期日的內容
 export const weekendData = {
-  // Saturday: Full chapter reading (8 weeks of different scriptures)
+  // 星期六：整章經文閱讀（8週不同的經文）
   saturdays: [
     {
       week: 1,
       day: 6,
-      title: "Full Chapter Reading",
-      scripture: "Psalm 23\n\n1 The Lord is my shepherd, I lack nothing.\n2 He makes me lie down in green pastures, he leads me beside quiet waters,\n3 he refreshes my soul. He guides me along the right paths for his name's sake.\n4 Even though I walk through the darkest valley, I will fear no evil, for you are with me; your rod and your staff, they comfort me.\n5 You prepare a table before me in the presence of my enemies. You anoint my head with oil; my cup overflows.\n6 Surely your goodness and love will follow me all the days of my life, and I will dwell in the house of the Lord forever."
+      title: "整章經文閱讀",
+      scripture: "詩篇 23\n\n1 耶和華是我的牧者，我必不致缺乏。\n2 他使我躺臥在青草地上，領我在可安歇的水邊。\n3 他使我的靈魂甦醒，為自己的名引導我走義路。\n4 我雖然行過死蔭的幽谷，也不怕遭害，因為你與我同在；你的杖，你的竿，都安慰我。\n5 在我敵人面前，你為我擺設筵席；你用油膏了我的頭，使我的福杯滿溢。\n6 我一生一世必有恩惠慈愛隨著我；我且要住在耶和華的殿中，直到永遠。"
     },
     {
       week: 2,
       day: 6,
-      title: "Full Chapter Reading",
-      scripture: "Matthew 5:1-16 (The Sermon on the Mount Begins)\n\n1 Now when Jesus saw the crowds, he went up on a mountainside and sat down. His disciples came to him,\n2 and he began to teach them. He said:\n3 \"Blessed are the poor in spirit, for theirs is the kingdom of heaven.\n4 Blessed are those who mourn, for they will be comforted.\n5 Blessed are the meek, for they will inherit the earth.\n6 Blessed are those who hunger and thirst for righteousness, for they will be filled.\n7 Blessed are the merciful, for they will be shown mercy.\n8 Blessed are the pure in heart, for they will see God.\n9 Blessed are the peacemakers, for they will be called children of God.\n10 Blessed are those who are persecuted because of righteousness, for theirs is the kingdom of heaven.\n11 Blessed are you when people insult you, persecute you and falsely say all kinds of evil against you because of me.\n12 Rejoice and be glad, because great is your reward in heaven, for in the same way they persecuted the prophets who were before you.\n13 You are the salt of the earth. But if the salt loses its saltiness, how can it be made salty again? It is no longer good for anything, except to be thrown out and trampled underfoot.\n14 You are the light of the world. A town built on a hill cannot be hidden.\n15 Neither do people light a lamp and put it under a bowl. Instead they put it on its stand, and it gives light to everyone in the house.\n16 In the same way, let your light shine before others, that they may see your good deeds and glorify your Father in heaven.\""
+      title: "整章經文閱讀",
+      scripture: "馬太福音 5:1-16（登山寶訓開始）\n\n1 耶穌看見這許多的人，就上了山，既已坐下，門徒到他跟前來，\n2 他就開口教訓他們，說：\n3 虛心的人有福了！因為天國是他們的。\n4 哀慟的人有福了！因為他們必得安慰。\n5 溫柔的人有福了！因為他們必承受地土。\n6 飢渴慕義的人有福了！因為他們必得飽足。\n7 憐恤人的人有福了！因為他們必蒙憐恤。\n8 清心的人有福了！因為他們必得見神。\n9 使人和睦的人有福了！因為他們必稱為神的兒子。\n10 為義受逼迫的人有福了！因為天國是他們的。\n11 人若因我辱罵你們，逼迫你們，捏造各樣壞話毀謗你們，你們就有福了！\n12 應當歡喜快樂，因為你們在天上的賞賜是大的。在你們以前的先知，人也是這樣逼迫他們。\n13 你們是世上的鹽。鹽若失了味，怎能叫它再鹹呢？以後無用，不過丟在外面，被人踐踏了。\n14 你們是世上的光。城造在山上是不能隱藏的。\n15 人點燈，不放在斗底下，是放在燈臺上，就照亮一家的人。\n16 你們的光也當這樣照在人前，叫他們看見你們的好行為，便將榮耀歸給你們在天上的父。"
     },
     {
       week: 3,
       day: 6,
-      title: "Full Chapter Reading",
-      scripture: "John 15:1-17 (The Vine and the Branches)\n\n1 \"I am the true vine, and my Father is the gardener.\n2 He cuts off every branch in me that bears no fruit, while every branch that does bear fruit he prunes so that it will be even more fruitful.\n3 You are already clean because of the word I have spoken to you.\n4 Remain in me, as I also remain in you. No branch can bear fruit by itself; it must remain in the vine. Neither can you bear fruit unless you remain in me.\n5 I am the vine; you are the branches. If you remain in me and I in you, you will bear much fruit; apart from me you can do nothing.\n6 If you do not remain in me, you are like a branch that is thrown away and withers; such branches are picked up, thrown into the fire and burned.\n7 If you remain in me and my words remain in you, ask whatever you wish, and it will be done for you.\n8 This is to my Father's glory, that you bear much fruit, showing yourselves to be my disciples.\n9 As the Father has loved me, so have I loved you. Now remain in my love.\n10 If you keep my commands, you will remain in my love, just as I have kept my Father's commands and remain in his love.\n11 I have told you this so that my joy may be in you and that your joy may be complete.\n12 My command is this: Love each other as I have loved you.\n13 Greater love has no one than this: to lay down one's life for one's friends.\n14 You are my friends if you do what I command.\n15 I no longer call you servants, because a servant does not know his master's business. Instead, I have called you friends, for everything that I learned from my Father I have made known to you.\n16 You did not choose me, but I chose you and appointed you so that you might go and bear fruit—fruit that will last—and so that whatever you ask in my name the Father will give you.\n17 This is my command: Love each other.\""
+      title: "整章經文閱讀",
+      scripture: "約翰福音 15:1-17（葡萄樹的比喻）\n\n1 我是真葡萄樹，我父是栽培的人。\n2 凡屬我不結果子的枝子，他就剪去；凡結果子的，他就修理乾淨，使枝子結果子更多。\n3 現在你們因我講給你們的道，已經乾淨了。\n4 你們要常在我裡面，我也常在你們裡面。枝子若不常在葡萄樹上，自己就不能結果子；你們若不常在我裡面，也是這樣。\n5 我是葡萄樹，你們是枝子。常在我裡面的，我也常在他裡面，這人就多結果子；因為離了我，你們就不能做什麼。\n6 人若不常在我裡面，就像枝子丟在外面枯乾，人拾起來，扔在火裡燒了。\n7 你們若常在我裡面，我的話也常在你們裡面，凡你們所願意的，祈求，就給你們成就。\n8 你們多結果子，我父就因此得榮耀，你們也就是我的門徒了。\n9 我愛你們，正如父愛我一樣；你們要常在我的愛裡。\n10 你們若遵守我的命令，就常在我的愛裡，正如我遵守了我父的命令，常在他的愛裡。\n11 這些事我已經對你們說了，是要叫我的喜樂存在你們心裡，並叫你們的喜樂可以滿足。\n12 你們要彼此相愛，像我愛你們一樣；這就是我的命令。\n13 人為朋友捨命，人的愛心沒有比這個大的。\n14 你們若遵行我所吩咐的，就是我的朋友了。\n15 以後我不再稱你們為僕人，因僕人不知道主人所做的事。我乃稱你們為朋友；因我從我父所聽見的，已經都告訴你們了。\n16 不是你們揀選了我，是我揀選了你們，並且分派你們去結果子，叫你們的果子常存，使你們奉我的名，無論向父求什麼，他就賜給你們。\n17 我這樣吩咐你們，是要叫你們彼此相愛。"
     },
     {
       week: 4,
       day: 6,
-      title: "Full Chapter Reading",
-      scripture: "Isaiah 40:1-31 (Comfort and Hope)\n\n1 Comfort, comfort my people, says your God.\n2 Speak tenderly to Jerusalem, and proclaim to her that her hard service has been completed, that her sin has been paid for, that she has received from the Lord's hand double for all her sins.\n3 A voice of one calling: \"In the wilderness prepare the way for the Lord; make straight in the desert a highway for our God.\n4 Every valley shall be raised up, every mountain and hill made low; the rough ground shall become level, the rugged places a plain.\n5 And the glory of the Lord will be revealed, and all people will see it together. For the mouth of the Lord has spoken.\"\n...\n28 Do you not know? Have you not heard? The Lord is the everlasting God, the Creator of the ends of the earth. He will not grow tired or weary, and his understanding no one can fathom.\n29 He gives strength to the weary and increases the power of the weak.\n30 Even youths grow tired and weary, and young men stumble and fall;\n31 but those who hope in the Lord will renew their strength. They will soar on wings like eagles; they will run and not grow weary, they will walk and not be faint."
+      title: "整章經文閱讀",
+      scripture: "以賽亞書 40:1-31（安慰與盼望）\n\n1 你們的神說：你們要安慰，安慰我的百姓。\n2 要對耶路撒冷說安慰的話，又向她宣告說，她爭戰的日子已滿了；她的罪孽赦免了；她為自己的一切罪，從耶和華手中加倍受罰。\n3 有人聲喊著說：在曠野預備耶和華的路，在沙漠地修平我們神的道。\n4 一切山窪都要填滿，大小山岡都要削平；高高低低的要改為平坦，崎崎嶇嶇的必成為平原。\n5 耶和華的榮耀必然顯現；凡有血氣的必一同看見；因為這是耶和華親口說的。\n...\n28 你豈不曾知道嗎？你豈不曾聽見嗎？永在的神耶和華，創造地極的主，並不疲乏，也不困倦；他的智慧無法測度。\n29 疲乏的，他賜能力；軟弱的，他加力量。\n30 就是少年人也要疲乏困倦；強壯的也必全然跌倒。\n31 但那等候耶和華的必從新得力。他們必如鷹展翅上騰；他們奔跑卻不困倦，行走卻不疲乏。"
     },
     {
       week: 5,
       day: 6,
-      title: "Full Chapter Reading",
-      scripture: "1 Corinthians 13:1-13 (The Love Chapter)\n\n1 If I speak in the tongues of men or of angels, but do not have love, I am only a resounding gong or a clanging cymbal.\n2 If I have the gift of prophecy and can fathom all mysteries and all knowledge, and if I have a faith that can move mountains, but do not have love, I am nothing.\n3 If I give all I possess to the poor and give over my body to hardship that I may boast, but do not have love, I gain nothing.\n4 Love is patient, love is kind. It does not envy, it does not boast, it is not proud.\n5 It does not dishonor others, it is not self-seeking, it is not easily angered, it keeps no record of wrongs.\n6 Love does not delight in evil but rejoices with the truth.\n7 It always protects, always trusts, always hopes, always perseveres.\n8 Love never fails. But where there are prophecies, they will cease; where there are tongues, they will be stilled; where there is knowledge, it will pass away.\n9 For we know in part and we prophesy in part,\n10 but when completeness comes, what is in part disappears.\n11 When I was a child, I talked like a child, I thought like a child, I reasoned like a child. When I became a man, I put the ways of childhood behind me.\n12 For now we see only a reflection as in a mirror; then we shall see face to face. Now I know in part; then I shall know fully, even as I am fully known.\n13 And now these three remain: faith, hope and love. But the greatest of these is love."
+      title: "整章經文閱讀",
+      scripture: "哥林多前書 13:1-13（愛的篇章）\n\n1 我若能說萬人的方言，並天使的話語，卻沒有愛，我就成了鳴的鑼，響的鈸一般。\n2 我若有先知講道之能，也明白各樣的奧秘，各樣的知識，而且有全備的信，叫我能夠移山，卻沒有愛，我就算不得什麼。\n3 我若將所有的賙濟窮人，又捨己身叫人焚燒，卻沒有愛，仍然與我無益。\n4 愛是恆久忍耐，又有恩慈；愛是不嫉妒；愛是不自誇，不張狂，\n5 不做害羞的事，不求自己的益處，不輕易發怒，不計算人的惡，\n6 不喜歡不義，只喜歡真理；\n7 凡事包容，凡事相信，凡事盼望，凡事忍耐。\n8 愛是永不止息。先知講道之能終必歸於無有；說方言之能終必停止；知識也終必歸於無有。\n9 我們現在所知道的有限，先知所講的也有限，\n10 等那完全的來到，這有限的必歸於無有了。\n11 我作孩子的時候，話語像孩子，心思像孩子，意念像孩子，既成了人，就把孩子的事丟棄了。\n12 我們如今彷彿對著鏡子觀看，模糊不清，到那時就要面對面了。我如今所知道的有限，到那時就全知道，如同主知道我一樣。\n13 如今常存的有信，有望，有愛這三樣，其中最大的是愛。"
     },
     {
       week: 6,
       day: 6,
-      title: "Full Chapter Reading",
-      scripture: "Romans 8:1-39 (Freedom in Christ)\n\n1 Therefore, there is now no condemnation for those who are in Christ Jesus,\n2 because through Christ Jesus the law of the Spirit who gives life has set you free from the law of sin and death.\n3 For what the law was powerless to do because it was weakened by the flesh, God did by sending his own Son in the likeness of sinful flesh to be a sin offering. And so he condemned sin in the flesh,\n4 in order that the righteous requirement of the law might be fully met in us, who do not live according to the flesh but according to the Spirit.\n...\n28 And we know that in all things God works for the good of those who love him, who have been called according to his purpose.\n29 For those God foreknew he also predestined to be conformed to the image of his Son, that he might be the firstborn among many brothers and sisters.\n30 And those he predestined, he also called; those he called, he also justified; those he justified, he also glorified.\n31 What, then, shall we say in response to these things? If God is for us, who can be against us?\n32 He who did not spare his own Son, but gave him up for us all—how will he not also, along with him, graciously give us all things?\n33 Who will bring any charge against those whom God has chosen? It is God who justifies.\n34 Who then is the one who condemns? No one. Christ Jesus who died—more than that, who was raised to life—is at the right hand of God and is also interceding for us.\n35 Who shall separate us from the love of Christ? Shall trouble or hardship or persecution or famine or nakedness or danger or sword?\n36 As it is written: \"For your sake we face death all day long; we are considered as sheep to be slaughtered.\"\n37 No, in all these things we are more than conquerors through him who loved us.\n38 For I am convinced that neither death nor life, neither angels nor demons, neither the present nor the future, nor any powers,\n39 neither height nor depth, nor anything else in all creation, will be able to separate us from the love of God that is in Christ Jesus our Lord."
+      title: "整章經文閱讀",
+      scripture: "羅馬書 8:1-39（在基督裡的自由）\n\n1 如今，那些在基督耶穌裡的就不定罪了。\n2 因為賜生命聖靈的律，在基督耶穌裡釋放了我，使我脫離罪和死的律了。\n3 律法既因肉體軟弱，有所不能行的，神就差遣自己的兒子，成為罪身的形狀，作了贖罪祭，在肉體中定了罪案，\n4 使律法的義成就在我們這不隨從肉體、只隨從聖靈的人身上。\n...\n28 我們曉得萬事都互相效力，叫愛神的人得益處，就是按他旨意被召的人。\n29 因為他預先所知道的人，就預先定下效法他兒子的模樣，使他兒子在許多弟兄中作長子。\n30 預先所定下的人又召他們來；所召來的人又稱他們為義；所稱為義的人又叫他們得榮耀。\n31 既是這樣，還有什麼說的呢？神若幫助我們，誰能敵擋我們呢？\n32 神既不愛惜自己的兒子，為我們眾人捨了，豈不也把萬物和他一同白白的賜給我們嗎？\n33 誰能控告神所揀選的人呢？有神稱他們為義了。\n34 誰能定他們的罪呢？有基督耶穌已經死了，而且從死裡復活，現今在神的右邊，也替我們祈求。\n35 誰能使我們與基督的愛隔絕呢？難道是患難嗎？是困苦嗎？是逼迫嗎？是飢餓嗎？是赤身露體嗎？是危險嗎？是刀劍嗎？\n36 如經上所記：我們為你的緣故終日被殺；人看我們如將宰的羊。\n37 然而，靠著愛我們的主，在這一切的事上已經得勝有餘了。\n38 因為我深信無論是死，是生，是天使，是掌權的，是有能的，是現在的事，是將來的事，\n39 是高處的，是低處的，是別的受造之物，都不能叫我們與神的愛隔絕；這愛是在我們的主基督耶穌裡的。"
     },
     {
       week: 7,
       day: 6,
-      title: "Full Chapter Reading",
-      scripture: "Philippians 4:1-23 (Rejoice in the Lord)\n\n1 Therefore, my brothers and sisters, you whom I love and long for, my joy and crown, stand firm in the Lord in this way, dear friends!\n2 I plead with Euodia and I plead with Syntyche to be of the same mind in the Lord.\n3 Yes, and I ask you, my true companion, help these women since they have contended at my side in the cause of the gospel, along with Clement and the rest of my co-workers, whose names are in the book of life.\n4 Rejoice in the Lord always. I will say it again: Rejoice!\n5 Let your gentleness be evident to all. The Lord is near.\n6 Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God.\n7 And the peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus.\n8 Finally, brothers and sisters, whatever is true, whatever is noble, whatever is right, whatever is pure, whatever is lovely, whatever is admirable—if anything is excellent or praiseworthy—think about such things.\n9 Whatever you have learned or received or heard from me, or seen in me—put it into practice. And the God of peace will be with you.\n10 I rejoiced greatly in the Lord that at last you renewed your concern for me. Indeed, you were concerned, but you had no opportunity to show it.\n11 I am not saying this because I am in need, for I have learned to be content whatever the circumstances.\n12 I know what it is to be in need, and I know what it is to have plenty. I have learned the secret of being content in any and every situation, whether well fed or hungry, whether living in plenty or in want.\n13 I can do all this through him who gives me strength.\n14 Yet it was good of you to share in my troubles.\n15 Moreover, as you Philippians know, in the early days of your acquaintance with the gospel, when I set out from Macedonia, not one church shared with me in the matter of giving and receiving, except you only;\n16 for even when I was in Thessalonica, you sent me aid more than once when I was in need.\n17 Not that I desire your gifts; what I desire is that more be credited to your account.\n18 I have received full payment and have more than enough. I am amply supplied, now that I have received from Epaphroditus the gifts you sent. They are a fragrant offering, an acceptable sacrifice, pleasing to God.\n19 And my God will meet all your needs according to the riches of his glory in Christ Jesus.\n20 To our God and Father be glory for ever and ever. Amen.\n21 Greet all God's people in Christ Jesus. The brothers and sisters who are with me send greetings.\n22 All God's people here send you greetings, especially those who belong to Caesar's household.\n23 The grace of the Lord Jesus Christ be with your spirit. Amen."
+      title: "整章經文閱讀",
+      scripture: "腓立比書 4:1-23（在主裡喜樂）\n\n1 我所親愛、所想念的弟兄們，你們就是我的喜樂，我的冠冕。我親愛的弟兄，你們應當靠主站立得穩。\n2 我勸友阿爹和循都基，要在主裡同心。\n3 我也求你這真實同負一軛的，幫助這兩個女人，因為她們在福音上曾與我一同勞苦；還有革利免，並其餘和我一同做工的，他們的名字都在生命冊上。\n4 你們要靠主常常喜樂。我再說，你們要喜樂。\n5 當叫眾人知道你們謙讓的心。主已經近了。\n6 應當一無掛慮，只要凡事藉著禱告、祈求，和感謝，將你們所要的告訴神。\n7 神所賜、出人意外的平安必在基督耶穌裡保守你們的心懷意念。\n8 弟兄們，我還有未盡的話：凡是真實的、可敬的、公義的、清潔的、可愛的、有美名的，若有什麼德行，若有什麼稱讚，這些事你們都要思念。\n9 你們在我身上所學習的，所領受的，所聽見的，所看見的，這些事你們都要去行，賜平安的神就必與你們同在。\n10 我靠主大大地喜樂，因為你們思念我的心如今又發生；你們向來就思念我，只是沒得機會。\n11 我並不是因缺乏說這話；我無論在什麼景況都可以知足，這是我已經學會了。\n12 我知道怎樣處卑賤，也知道怎樣處豐富；或飽足，或飢餓；或有餘，或缺乏，隨事隨在，我都得了秘訣。\n13 我靠著那加給我力量的，凡事都能做。\n14 然而，你們和我同受患難原是美事。\n15 腓立比人哪，你們也知道我初傳福音離了馬其頓的時候，論到授受的事，除了你們以外，並沒有別的教會供給我。\n16 就是我在帖撒羅尼迦，你們也一次兩次地打發人供給我的需用。\n17 我並不求什麼饋送，所求的就是你們的果子漸漸增多，歸在你們的賬上。\n18 但我樣樣都有，並且有餘。我已經充足，因我從以巴弗提受了你們的饋送，當作極美的香氣，為神所收納、所喜悅的祭物。\n19 我的神必照他榮耀的豐富，在基督耶穌裡，使你們一切所需用的都充足。\n20 願榮耀歸給我們的父神，直到永永遠遠。阿們！\n21 請問在基督耶穌裡的各位聖徒安。在我這裡的眾弟兄都問你們安。\n22 眾聖徒都問你們安。在凱撒家裡的人特特地問你們安。\n23 願我主耶穌基督的恩常在你們心裡！"
     },
     {
       week: 8,
       day: 6,
-      title: "Full Chapter Reading",
-      scripture: "Revelation 21:1-27 (The New Heaven and the New Earth)\n\n1 Then I saw \"a new heaven and a new earth,\" for the first heaven and the first earth had passed away, and there was no longer any sea.\n2 I saw the Holy City, the new Jerusalem, coming down out of heaven from God, prepared as a bride beautifully dressed for her husband.\n3 And I heard a loud voice from the throne saying, \"Look! God's dwelling place is now among the people, and he will dwell with them. They will be his people, and God himself will be with them and be their God.\n4 'He will wipe every tear from their eyes. There will be no more death' or mourning or crying or pain, for the old order of things has passed away.\"\n5 He who was seated on the throne said, \"I am making everything new!\" Then he said, \"Write this down, for these words are trustworthy and true.\"\n6 He said to me: \"It is done. I am the Alpha and the Omega, the Beginning and the End. To the thirsty I will give water without cost from the spring of the water of life.\n7 Those who are victorious will inherit all this, and I will be their God and they will be my children.\n8 But the cowardly, the unbelieving, the vile, the murderers, the sexually immoral, those who practice magic arts, the idolaters and all liars—they will be consigned to the fiery lake of burning sulfur. This is the second death.\"\n9 One of the seven angels who had the seven bowls full of the seven last plagues came and said to me, \"Come, I will show you the bride, the wife of the Lamb.\"\n10 And he carried me away in the Spirit to a mountain great and high, and showed me the Holy City, Jerusalem, coming down out of heaven from God.\n11 It shone with the glory of God, and its brilliance was like that of a very precious jewel, like a jasper, clear as crystal.\n12 It had a great, high wall with twelve gates, and with twelve angels at the gates. On the gates were written the names of the twelve tribes of Israel.\n13 There were three gates on the east, three on the north, three on the south and three on the west.\n14 The wall of the city had twelve foundations, and on them were the names of the twelve apostles of the Lamb.\n15 The angel who talked with me had a measuring rod of gold to measure the city, its gates and its walls.\n16 The city was laid out like a square, as long as it was wide. He measured the city with the rod and found it to be 12,000 stadia in length, and as wide and high as it is long.\n17 The angel measured the wall using human measurement, and it was 144 cubits thick.\n18 The wall was made of jasper, and the city of pure gold, as pure as glass.\n19 The foundations of the city walls were decorated with every kind of precious stone. The first foundation was jasper, the second sapphire, the third agate, the fourth emerald,\n20 the fifth onyx, the sixth ruby, the seventh chrysolite, the eighth beryl, the ninth topaz, the tenth turquoise, the eleventh jacinth, and the twelfth amethyst.\n21 The twelve gates were twelve pearls, each gate made of a single pearl. The great street of the city was of gold, as pure as transparent glass.\n22 I did not see a temple in the city, because the Lord God Almighty and the Lamb are its temple.\n23 The city does not need the sun or the moon to shine on it, for the glory of God gives it light, and the Lamb is its lamp.\n24 The nations will walk by its light, and the kings of the earth will bring their splendor into it.\n25 On no day will its gates ever be shut, for there will be no night there.\n26 The glory and honor of the nations will be brought into it.\n27 Nothing impure will ever enter it, nor will anyone who does what is shameful or deceitful, but only those whose names are written in the Lamb's book of life."
+      title: "整章經文閱讀",
+      scripture: "啟示錄 21:1-27（新天新地）\n\n1 我又看見一個新天新地；因為先前的天地已經過去了，海也不再有了。\n2 我又看見聖城新耶路撒冷由神那裡從天而降，預備好了，就如新婦妝飾整齊，等候丈夫。\n3 我聽見有大聲音從寶座出來說：看哪，神的帳幕在人間。他要與人同住，他們要作他的子民。神要親自與他們同在，作他們的神。\n4 神要擦去他們一切的眼淚；不再有死亡，也不再有悲哀、哭號、疼痛，因為以前的事都過去了。\n5 坐寶座的說：看哪，我將一切都更新了！又說：你要寫上；因這些話是可信的，是真實的。\n6 他又對我說：都成了！我是阿拉法，我是俄梅戛；我是初，我是終。我要將生命泉的水白白賜給那口渴的人喝。\n7 得勝的，必承受這些為業：我要作他的神，他要作我的兒子。\n8 惟有膽怯的、不信的、可憎的、殺人的、淫亂的、行邪術的、拜偶像的，和一切說謊話的，他們的分就在燒著硫磺的火湖裡；這是第二次的死。\n9 拿著七個金碗、盛滿末後七災的七位天使中，有一位來對我說：你到這裡來，我要將新婦，就是羔羊的妻，指給你看。\n10 我被聖靈感動，天使就帶我到一座高大的山，將那由神那裡、從天而降的聖城耶路撒冷指示我。\n11 城中有神的榮耀；城的光輝如同極貴的寶石，好像碧玉，明如水晶。\n12 有高大的牆，有十二個門，門上有十二位天使；門上又寫著以色列十二個支派的名字。\n13 東邊有三門、北邊有三門、南邊有三門、西邊有三門。\n14 城牆有十二根基，根基上有羔羊十二使徒的名字。\n15 對我說話的，拿著金葦子當尺，要量那城和城門城牆。\n16 城是四方的，長寬一樣。天使用葦子量那城，共有四千里，長、寬、高都是一樣；\n17 又量了城牆，按著人的尺寸，就是天使的尺寸，共有一百四十四肘。\n18 牆是碧玉造的；城是精金，如同明淨的玻璃。\n19 城牆的根基是用各樣寶石修飾的：第一根基是碧玉；第二是藍寶石；第三是綠瑪瑙；第四是綠寶石；\n20 第五是紅瑪瑙；第六是紅寶石；第七是黃璧璽；第八是水蒼玉；第九是紅璧璽；第十是翡翠；第十一是紫瑪瑙；第十二是紫晶。\n21 十二個門是十二顆珍珠，每門是一顆珍珠。城內的街道是精金，好像明透的玻璃。\n22 我未見城內有殿，因主神全能者和羔羊為城的殿。\n23 那城內又不用日月光照；因有神的榮耀光照，又有羔羊為城的燈。\n24 列國要在城的光裡行走；地上的君王必將自己的榮耀歸與那城。\n25 城門白晝總不關閉，在那裡原沒有黑夜。\n26 人必將列國的榮耀、尊貴歸與那城。\n27 凡不潔淨的，並那行可憎與虛謊之事的，總不得進那城；只有名字寫在羔羊生命冊上的才得進去。"
     }
   ],
-  // Sunday: Sermon notes
+  // 星期日：聽道筆記
   sundays: [
     {
       week: 1,
       day: 7,
-      title: "Sunday Sermon Notes",
-      description: "Please record the message you heard in today's Sunday service"
+      title: "主日聽道筆記",
+      description: "請記錄今天在主日崇拜中聽到的信息"
     },
     {
       week: 2,
       day: 7,
-      title: "Sunday Sermon Notes",
-      description: "Please record the message you heard in today's Sunday service"
+      title: "主日聽道筆記",
+      description: "請記錄今天在主日崇拜中聽到的信息"
     },
     {
       week: 3,
       day: 7,
-      title: "Sunday Sermon Notes",
-      description: "Please record the message you heard in today's Sunday service"
+      title: "主日聽道筆記",
+      description: "請記錄今天在主日崇拜中聽到的信息"
     },
     {
       week: 4,
       day: 7,
-      title: "Sunday Sermon Notes",
-      description: "Please record the message you heard in today's Sunday service"
+      title: "主日聽道筆記",
+      description: "請記錄今天在主日崇拜中聽到的信息"
     },
     {
       week: 5,
       day: 7,
-      title: "Sunday Sermon Notes",
-      description: "Please record the message you heard in today's Sunday service"
+      title: "主日聽道筆記",
+      description: "請記錄今天在主日崇拜中聽到的信息"
     },
     {
       week: 6,
       day: 7,
-      title: "Sunday Sermon Notes",
-      description: "Please record the message you heard in today's Sunday service"
+      title: "主日聽道筆記",
+      description: "請記錄今天在主日崇拜中聽到的信息"
     },
     {
       week: 7,
       day: 7,
-      title: "Sunday Sermon Notes",
-      description: "Please record the message you heard in today's Sunday service"
+      title: "主日聽道筆記",
+      description: "請記錄今天在主日崇拜中聽到的信息"
     },
     {
       week: 8,
       day: 7,
-      title: "Sunday Sermon Notes",
-      description: "Please record the message you heard in today's Sunday service"
+      title: "主日聽道筆記",
+      description: "請記錄今天在主日崇拜中聽到的信息"
     }
   ]
 };

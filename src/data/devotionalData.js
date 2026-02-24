@@ -1,290 +1,290 @@
-// 8 weeks × 5 days of devotional content (40 days total)
+// 8 週 × 5 天的靈修內容（共40天）
 export const devotionalData = [
-  // Week 1 - Salvation and God's Great Love
+  // 第 1 週 - 得救與神的大愛
   {
     week: 1,
     days: [
       {
         day: 1,
-        title: "God's Great Love and Salvation",
-        scripture: "John 3:16-17\n\"For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life. For God did not send his Son into the world to condemn the world, but to save the world through him.\"",
-        reflectionQuestion: "What does this passage tell us about God's love for you? How do you respond to this love?"
+        title: "神的大愛與救恩",
+        scripture: "約翰福音 3:16-17\n「神愛世人，甚至將他獨一的兒子賜給他們，叫一切信他的人不致滅亡，反得永生。因為神差他的兒子到世上來，不是要定世人的罪，乃是要使世人因他得救。」",
+        reflectionQuestion: "這段經文告訴我們神對你有什麼樣的愛？你如何回應這份愛？"
       },
       {
         day: 2,
-        title: "Becoming Children of God",
-        scripture: "John 1:12-13\n\"Yet to all who did receive him, to those who believed in his name, he gave the right to become children of God—children born not of natural descent, nor of human decision or a husband's will, but born of God.\"",
-        reflectionQuestion: "What does it mean to you to become a child of God? How does this new identity change your life?"
+        title: "成為神的兒女",
+        scripture: "約翰福音 1:12-13\n「凡接待他的，就是信他名的人，他就賜他們權柄，作神的兒女。這等人不是從血氣生的，不是從情慾生的，也不是從人意生的，乃是從神生的。」",
+        reflectionQuestion: "成為神的兒女對你來說意味著什麼？這個新身份如何改變你的生命？"
       },
       {
         day: 3,
-        title: "God's Initiative in Love",
-        scripture: "Romans 5:8\n\"But God demonstrates his own love for us in this: While we were still sinners, Christ died for us.\"",
-        reflectionQuestion: "What comfort does it bring you that God loved us while we were still sinners? How does this help you overcome feelings of unworthiness?"
+        title: "神主動的愛",
+        scripture: "羅馬書 5:8\n「惟有基督在我們還作罪人的時候為我們死，神的愛就在此向我們顯明了。」",
+        reflectionQuestion: "神在我們還是罪人的時候就愛我們，這對你有什麼安慰？如何幫助你克服自卑感？"
       },
       {
         day: 4,
-        title: "A New Creation",
-        scripture: "2 Corinthians 5:17\n\"Therefore, if anyone is in Christ, the new creation has come: The old has gone, the new is here!\"",
-        reflectionQuestion: "What changes have you noticed in yourself since becoming a Christian? What old things do you need to let go of?"
+        title: "新造的人",
+        scripture: "哥林多後書 5:17\n「若有人在基督裡，他就是新造的人，舊事已過，都變成新的了。」",
+        reflectionQuestion: "成為基督徒後，你覺得自己有什麼改變？哪些舊事需要放下？"
       },
       {
         day: 5,
-        title: "By Grace, Through Faith",
-        scripture: "Ephesians 2:8-10\n\"For it is by grace you have been saved, through faith—and this is not from yourselves, it is the gift of God—not by works, so that no one can boast. For we are God's handiwork, created in Christ Jesus to do good works, which God prepared in advance for us to do.\"",
-        reflectionQuestion: "Why can't we be saved by works? What comfort does this bring you?"
+        title: "本乎恩，因著信",
+        scripture: "以弗所書 2:8-10\n「你們得救是本乎恩，也因著信；這並不是出於自己，乃是神所賜的；也不是出於行為，免得有人自誇。我們原是他的工作，在基督耶穌裡造成的，為要叫我們行善，就是神所預備叫我們行的。」",
+        reflectionQuestion: "為什麼我們不能靠行為得救？這對你有什麼安慰？"
       }
     ]
   },
-  // Week 2 - Jesus' Teachings and Parables
+  // 第 2 週 - 耶穌的教訓與比喻
   {
     week: 2,
     days: [
       {
         day: 1,
-        title: "The Beatitudes",
-        scripture: "Matthew 5:3-12\n\"Blessed are the poor in spirit, for theirs is the kingdom of heaven. Blessed are those who mourn, for they will be comforted. Blessed are the meek, for they will inherit the earth. Blessed are those who hunger and thirst for righteousness, for they will be filled. Blessed are the merciful, for they will be shown mercy. Blessed are the pure in heart, for they will see God. Blessed are the peacemakers, for they will be called children of God. Blessed are those who are persecuted because of righteousness, for theirs is the kingdom of heaven.\"",
-        reflectionQuestion: "How is Jesus' view of happiness different from the world's? Which type of blessed person do you hope to become?"
+        title: "登山寶訓八福",
+        scripture: "馬太福音 5:3-12\n「虛心的人有福了！因為天國是他們的。哀慟的人有福了！因為他們必得安慰。溫柔的人有福了！因為他們必承受地土。飢渴慕義的人有福了！因為他們必得飽足。憐恤人的人有福了！因為他們必蒙憐恤。清心的人有福了！因為他們必得見神。使人和睦的人有福了！因為他們必稱為神的兒子。為義受逼迫的人有福了！因為天國是他們的。」",
+        reflectionQuestion: "耶穌教導的幸福觀與世界有什麼不同？你希望成為哪一種有福的人？"
       },
       {
         day: 2,
-        title: "Do Not Worry",
-        scripture: "Matthew 6:25-34\n\"Therefore I tell you, do not worry about your life, what you will eat or drink; or about your body, what you will wear. Is not life more than food, and the body more than clothes? Look at the birds of the air; they do not sow or reap or store away in barns, and yet your heavenly Father feeds them. Are you not much more valuable than they? But seek first his kingdom and his righteousness, and all these things will be given to you as well.\"",
-        reflectionQuestion: "What do you usually worry about? How does this passage help you learn to trust in God's provision?"
+        title: "不要憂慮",
+        scripture: "馬太福音 6:25-34\n「所以我告訴你們，不要為生命憂慮吃什麼，喝什麼；為身體憂慮穿什麼。生命不勝於飲食嗎？身體不勝於衣裳嗎？你們看那天上的飛鳥，也不種，也不收，也不積蓄在倉裡，你們的天父尚且養活牠。你們不比飛鳥貴重得多嗎？你們要先求他的國和他的義，這些東西都要加給你們了。」",
+        reflectionQuestion: "你通常為什麼事情憂慮？這段經文如何幫助你學習信靠神的供應？"
       },
       {
         day: 3,
-        title: "The Prodigal Son",
-        scripture: "Luke 15:11-32\n(The parable of the prodigal son: the younger son leaves home, wastes his inheritance, returns, and receives the father's forgiveness and welcome.)\n\"But the father said to his servants, 'Quick! Bring the best robe and put it on him. Put a ring on his finger and sandals on his feet. Bring the fattened calf and kill it. Let's have a feast and celebrate. For this son of mine was dead and is alive again; he was lost and is found.'\"",
-        reflectionQuestion: "How does this parable help you understand God's forgiveness and acceptance? Which character in the story do you identify with?"
+        title: "浪子回頭",
+        scripture: "路加福音 15:11-32\n（浪子回頭的比喻：小兒子離家、浪費、回轉、父親的赦免與歡迎。）\n「父親卻吩咐僕人說：『把那上好的袍子快拿出來給他穿；把戒指戴在他指頭上；把鞋穿在他腳上；把那肥牛犢牽來宰了，我們可以吃喝快樂；因為我這個兒子是死而復活，失而又得的。』」",
+        reflectionQuestion: "這個比喻如何幫助你明白神的赦免與接納？你覺得自己像故事中的哪個角色？"
       },
       {
         day: 4,
-        title: "The Good Samaritan",
-        scripture: "Luke 10:25-37\n(The parable of the Good Samaritan: the priest and Levite ignore the injured man, the Samaritan helps; Jesus teaches 'love your neighbor as yourself.')\n\"Which of these three do you think was a neighbor to the man who fell into the hands of robbers?\" The expert in the law replied, \"The one who had mercy on him.\" Jesus told him, \"Go and do likewise.\"",
-        reflectionQuestion: "Who is your neighbor? How can you practice 'loving your neighbor as yourself' in your daily life?"
+        title: "好撒瑪利亞人",
+        scripture: "路加福音 10:25-37\n（好撒瑪利亞人的比喻：祭司、利未人忽略受傷人，撒瑪利亞人幫助；耶穌教導「愛鄰舍如同自己」。）\n「你想，這三個人哪一個是落在強盜手中的鄰舍呢？」他說：「是憐憫他的。」耶穌說：「你去照樣行吧。」",
+        reflectionQuestion: "誰是你的鄰舍？你如何在生活中實踐「愛鄰舍如同自己」？"
       },
       {
         day: 5,
-        title: "The Parable of the Sower",
-        scripture: "Matthew 13:3-9,18-23\n(The parable of the sower: Jesus explains four types of soil, helping new believers examine how their hearts receive God's word.)\n\"But the seed falling on good soil refers to someone who hears the word and understands it. This is the one who produces a crop, yielding a hundred, sixty or thirty times what was sown.\"",
-        reflectionQuestion: "Which type of soil does your heart resemble? How can you become good soil that bears spiritual fruit?"
+        title: "撒種的比喻",
+        scripture: "馬太福音 13:3-9,18-23\n（撒種的比喻：耶穌解釋四種土壤，幫助初信者檢視自己心田如何接受神的道。）\n「有落在好土裡的，就結實，有一百倍的，有六十倍的，有三十倍的。」",
+        reflectionQuestion: "你的心田像哪一種土壤？如何讓自己成為好土，結出屬靈的果子？"
       }
     ]
   },
-  // Week 3 - Jesus' Miracles and Life Stories
+  // 第 3 週 - 耶穌的神蹟與生平故事
   {
     week: 3,
     days: [
       {
         day: 1,
-        title: "The Source of Living Water",
-        scripture: "John 4:1-42\n(Jesus and the Samaritan woman: Jesus crosses racial and gender boundaries, gives living water; the woman spreads the gospel, the whole city believes.)\n\"Jesus answered, 'If you knew the gift of God and who it is that asks you for a drink, you would have asked him and he would have given you living water.'\"",
-        reflectionQuestion: "What is the 'living water' that Jesus speaks of? How can you receive this living water?"
+        title: "活水的泉源",
+        scripture: "約翰福音 4:1-42\n（耶穌與撒瑪利亞婦人：耶穌跨越種族、性別界限，給活水；婦人傳福音，全城人信主。）\n「耶穌回答說：『你若知道神的恩賜，和對你說「給我水喝」的是誰，你必早求他，他也必早給了你活水。』」",
+        reflectionQuestion: "耶穌所說的「活水」是什麼？你如何得著這活水？"
       },
       {
         day: 2,
-        title: "Healing and Resurrection",
-        scripture: "Mark 5:21-43\n(Jairus' daughter and the woman with bleeding: Jesus heals the desperate woman and raises the dead girl, demonstrating his authority over disease and death.)\n\"He said to her, 'Daughter, your faith has healed you. Go in peace and be freed from your suffering.'\"",
-        reflectionQuestion: "What comfort does it bring you that Jesus has authority over disease and death? How can you learn to come to Jesus in faith like the woman with bleeding?"
+        title: "醫治與復活",
+        scripture: "馬可福音 5:21-43\n（睚魯女兒與血漏婦人：耶穌醫治絕望的婦人與復活死去的女孩，顯明他有權柄勝過疾病與死亡。）\n「耶穌對她說：『女兒，你的信救了你，平平安安地回去吧！你的災病痊癒了。』」",
+        reflectionQuestion: "耶穌有權柄勝過疾病與死亡，這對你有什麼安慰？你如何學習像血漏婦人一樣憑信心來到耶穌面前？"
       },
       {
         day: 3,
-        title: "Seeking the Lost",
-        scripture: "Luke 19:1-10\n(Zacchaeus' story: chief tax collector Zacchaeus climbs a tree to see Jesus, Jesus goes to his house, he repents, Jesus says 'the Son of Man came to seek and to save the lost.')\n\"Jesus said to him, 'Today salvation has come to this house, because this man, too, is a son of Abraham. For the Son of Man came to seek and to save the lost.'\"",
-        reflectionQuestion: "How does Jesus' initiative in seeking Zacchaeus demonstrate God's love for you? How do you respond to this love?"
+        title: "尋找失喪的人",
+        scripture: "路加福音 19:1-10\n（撒該的故事：稅吏長撒該爬樹見耶穌，耶穌主動去他家，他悔改，耶穌說「人子來，為要尋找、拯救失喪的人」。）\n「耶穌說：『今天救恩到了這家，因為他也是亞伯拉罕的子孫。人子來，為要尋找、拯救失喪的人。』」",
+        reflectionQuestion: "耶穌主動尋找撒該，這如何顯明神對你的愛？你如何回應這份愛？"
       },
       {
         day: 4,
-        title: "Faith in the Storm",
-        scripture: "Matthew 14:22-33\n(Jesus walks on water, Peter attempts to walk: faith and the cry in the storm 'Lord, save me!')\n\"'Lord, if it's you,' Peter replied, 'tell me to come to you on the water.' 'Come,' he said. ... Then Peter cried out, 'Lord, save me!'\"",
-        reflectionQuestion: "When you face storms in life, how can you learn to cry out like Peter, 'Lord, save me!'?"
+        title: "風浪中的信心",
+        scripture: "馬太福音 14:22-33\n（耶穌在水面上行走，彼得試走：信心與風浪中的呼求「主，救我！」）\n「彼得說：『主，如果是你，請叫我從水面上走到你那裡去。』耶穌說：『你來吧。』……彼得就喊著說：『主啊，救我！』」",
+        reflectionQuestion: "當你遇到人生的風浪時，如何學習像彼得一樣呼求「主，救我！」？"
       },
       {
         day: 5,
-        title: "Come to Jesus for Rest",
-        scripture: "Matthew 11:28-30\n\"Come to me, all you who are weary and burdened, and I will give you rest. Take my yoke upon you and learn from me, for I am gentle and humble in heart, and you will find rest for your souls. For my yoke is easy and my burden is light.\"",
-        reflectionQuestion: "What burdens are you carrying now? How can you bring these burdens to Jesus?"
+        title: "到耶穌這裡得安息",
+        scripture: "馬太福音 11:28-30\n「凡勞苦擔重擔的人可以到我這裡來，我就使你們得安息。我心裡柔和謙卑，你們當負我的軛，學我的樣式；這樣，你們心裡就必得享安息。因為我的軛是容易的，我的擔子是輕省的。」",
+        reflectionQuestion: "你現在有什麼重擔？如何將這些重擔帶到耶穌面前？"
       }
     ]
   },
-  // Week 4 - Old Testament Stories (Faith, Obedience, God's Provision)
+  // 第 4 週 - 舊約著名故事（信心、順服、神的供應）
   {
     week: 4,
     days: [
       {
         day: 1,
-        title: "Abraham's Faith",
-        scripture: "Genesis 22:1-18\n(Abraham offers Isaac: God tests Abraham's faith, ultimately provides a ram as substitute.)\n\"Abraham answered, 'God himself will provide the lamb for the burnt offering, my son.'\"",
-        reflectionQuestion: "How does Abraham's faith inspire you? How can you learn to trust that God will provide in difficult times?"
+        title: "亞伯拉罕的信心",
+        scripture: "創世記 22:1-18\n（亞伯拉罕獻以撒：神試驗亞伯拉罕的信心，最終供應公羊代替。）\n「亞伯拉罕說：『我兒，神必自己預備作燔祭的羊羔。』」",
+        reflectionQuestion: "亞伯拉罕的信心如何激勵你？你如何學習在困難中相信神必預備？"
       },
       {
         day: 2,
-        title: "Joseph's Victory",
-        scripture: "Genesis 37,39-45\n(Joseph sold to Egypt, ultimately victorious: Joseph sold by brothers, imprisoned, becomes Egypt's prime minister, says 'You intended to harm me, but God intended it for good.')\n\"Joseph said to them, 'Don't be afraid. Am I in the place of God? You intended to harm me, but God intended it for good to accomplish what is now being done, the saving of many lives.'\"",
-        reflectionQuestion: "How did Joseph see God's good purpose in his suffering? How does this help you face difficulties in life?"
+        title: "約瑟的得勝",
+        scripture: "創世記 37,39-45\n（約瑟被賣到埃及，最終得勝：約瑟被兄弟賣、被囚，最後成為埃及宰相，說：「從前你們的意思是要害我，但神的意思原是好的。」）\n「約瑟對他們說：『不要害怕，我豈能代替神呢？從前你們的意思是要害我，但神的意思原是好的，要保全許多人的性命，成就今日的光景。』」",
+        reflectionQuestion: "約瑟在苦難中如何看見神的美意？這如何幫助你面對人生的困難？"
       },
       {
         day: 3,
-        title: "The Parting of the Red Sea",
-        scripture: "Exodus 14:10-31\n(The parting of the Red Sea: Israelites pursued, God parts the Red Sea, saves the people.)\n\"Moses answered the people, 'Do not be afraid. Stand firm and you will see the deliverance the Lord will bring you today. The Egyptians you see today you will never see again.'\"",
-        reflectionQuestion: "When you feel there's no way out, how can you learn to trust that God will make a way for you?"
+        title: "紅海分開",
+        scripture: "出埃及記 14:10-31\n（紅海分開：以色列人被追趕，神分開紅海，拯救百姓。）\n「摩西對百姓說：『不要懼怕，只管站住！看耶和華今天向你們所要施行的救恩。因為，你們今天所看見的埃及人必永遠不再看見了。』」",
+        reflectionQuestion: "當你感到走投無路時，如何學習信靠神會為你開路？"
       },
       {
         day: 4,
-        title: "Protection in the Fiery Furnace",
-        scripture: "Daniel 3\n(Three young men refuse to worship the golden image, thrown into fiery furnace, God protects: the story of King Nebuchadnezzar and the furnace, demonstrating God's deliverance from temptation.)\n\"He said, 'Look! I see four men walking around in the fire, unbound and unharmed, and the fourth looks like a son of the gods.'\"",
-        reflectionQuestion: "When you face temptation or pressure, how can you learn from these three young men's faith?"
+        title: "火窯中的保護",
+        scripture: "但以理書 3\n（三個青年不拜金像，被扔火窯，神保守：尼布甲尼撒王與火窯的故事，顯明神救人脫離試探。）\n「王說：『看哪，我見有四個人，並沒有捆綁，在火中遊行，也沒有受傷；那第四個的相貌好像神子。』」",
+        reflectionQuestion: "當你面對試探或壓力時，如何學習這三個青年的信心？"
       },
       {
         day: 5,
-        title: "Protection in the Lions' Den",
-        scripture: "Daniel 6\n(Daniel thrown into lions' den, God shuts the lions' mouths: uncompromising prayer, God protects.)\n\"My God sent his angel, and he shut the mouths of the lions. They have not hurt me, because I was found innocent in his sight. Nor have I ever done any wrong before you, Your Majesty.'\"",
-        reflectionQuestion: "How does Daniel's uncompromising commitment to prayer inspire you to stand firm in your faith?"
+        title: "獅子坑中的保護",
+        scripture: "但以理書 6\n（但以理被扔獅子坑，神封住獅子口：禱告不妥協，神保守。）\n「我的神差遣使者，封住獅子的口，叫獅子不傷我；因我在神面前無辜，我在王面前也沒有行過虧損的事。」",
+        reflectionQuestion: "但以理堅持禱告不妥協，這如何激勵你在信仰上站立得穩？"
       }
     ]
   },
-  // Week 5 - Old Testament Stories and New Believer Growth
+  // 第 5 週 - 舊約故事與初信者成長
   {
     week: 5,
     days: [
       {
         day: 1,
-        title: "Jonah's Repentance",
-        scripture: "Jonah 1-4\n(Jonah swallowed by a great fish, repents and preaches to Nineveh: God shows mercy to those who repent, even a Gentile city.)\n\"Jonah obeyed the word of the Lord and went to Nineveh. Now Nineveh was a very large city; it took three days to go through it. Jonah began by going a day's journey into the city, proclaiming, 'Forty more days and Nineveh will be overthrown.'\"",
-        reflectionQuestion: "How does God's mercy toward Jonah and the people of Nineveh help you understand God's heart?"
+        title: "約拿的悔改",
+        scripture: "約拿書 1-4\n（約拿被大魚吞，悔改傳尼尼微：神憐憫悔改的人，即使是外邦城。）\n「約拿便照耶和華的話起來，往尼尼微去。這尼尼微是極大的城，有三日的路程。約拿進城走了一日，宣告說：『再等四十日，尼尼微必傾覆了！』」",
+        reflectionQuestion: "神對約拿和尼尼微人的憐憫，如何幫助你明白神的心腸？"
       },
       {
         day: 2,
-        title: "The Lord is My Shepherd",
-        scripture: "Psalm 23\n\"The Lord is my shepherd, I lack nothing. He makes me lie down in green pastures, he leads me beside quiet waters, he refreshes my soul. He guides me along the right paths for his name's sake. Even though I walk through the darkest valley, I will fear no evil, for you are with me; your rod and your staff, they comfort me.\"",
-        reflectionQuestion: "How does this psalm describe your relationship with God? How have you experienced God as your shepherd?"
+        title: "耶和華是我的牧者",
+        scripture: "詩篇 23\n「耶和華是我的牧者，我必不致缺乏。他使我躺臥在青草地上，領我在可安歇的水邊。他使我的靈魂甦醒，為自己的名引導我走義路。我雖然行過死蔭的幽谷，也不怕遭害，因為你與我同在；你的杖，你的竿，都安慰我。」",
+        reflectionQuestion: "這篇詩篇如何描述神與你的關係？你如何經歷神是你的牧者？"
       },
       {
         day: 3,
-        title: "David's Confession",
-        scripture: "Psalm 51:1-12\n\"Have mercy on me, O God, according to your unfailing love; according to your great compassion blot out my transgressions. Wash away all my iniquity and cleanse me from my sin. ... Create in me a pure heart, O God, and renew a steadfast spirit within me.\"",
-        reflectionQuestion: "When you sin, how can you learn to come before God in confession like David?"
+        title: "大衛的認罪",
+        scripture: "詩篇 51:1-12\n「神啊，求你按你的慈愛憐恤我！按你豐盛的慈悲塗抹我的過犯！求你將我的罪孽洗除淨盡，並潔除我的罪！……求你為我造清潔的心，使我裡面重新有正直的靈。」",
+        reflectionQuestion: "當你犯罪時，如何學習像大衛一樣來到神面前認罪？"
       },
       {
         day: 4,
-        title: "Waiting on the Lord for Renewed Strength",
-        scripture: "Isaiah 40:28-31\n\"Do you not know? Have you not heard? The Lord is the everlasting God, the Creator of the ends of the earth. He will not grow tired or weary, and his understanding no one can fathom. He gives strength to the weary and increases the power of the weak. Even youths grow tired and weary, and young men stumble and fall; but those who hope in the Lord will renew their strength. They will soar on wings like eagles; they will run and not grow weary, they will walk and not be faint.\"",
-        reflectionQuestion: "How can you learn to wait on the Lord? When do you especially need renewed strength from God?"
+        title: "等候耶和華得新力",
+        scripture: "以賽亞書 40:28-31\n「你豈不曾知道嗎？你豈不曾聽見嗎？永在的神耶和華，創造地極的主，並不疲乏，也不困倦；他的智慧無法測度。疲乏的，他賜能力；軟弱的，他加力量。就是少年人也要疲乏困倦；強壯的也必全然跌倒。但那等候耶和華的必從新得力。他們必如鷹展翅上騰；他們奔跑卻不困倦，行走卻不疲乏。」",
+        reflectionQuestion: "你如何學習等候耶和華？在什麼時候你特別需要從神得新力？"
       },
       {
         day: 5,
-        title: "God's Plans to Give You Hope",
-        scripture: "Jeremiah 29:11\n\"For I know the plans I have for you,' declares the Lord, 'plans to prosper you and not to harm you, plans to give you hope and a future.'\"",
-        reflectionQuestion: "How does knowing that God has good plans for you affect your view of the future?"
+        title: "神賜平安的意念",
+        scripture: "耶利米書 29:11\n「耶和華說：我知道我向你們所懷的意念是賜平安的意念，不是降災禍的意念，要叫你們末後有指望。」",
+        reflectionQuestion: "知道神對你有美好的計劃，如何影響你對未來的看法？"
       }
     ]
   },
-  // Week 6 - New Believer Life and Growth
+  // 第 6 週 - 初信者生活與成長
   {
     week: 6,
     days: [
       {
         day: 1,
-        title: "Jesus is the Way, the Truth, and the Life",
-        scripture: "John 14:1-6\n\"Do not let your hearts be troubled. You believe in God; believe also in me. My Father's house has many rooms; if that were not so, would I have told you that I am going there to prepare a place for you? And if I go and prepare a place for you, I will come back and take you to be with me that you also may be where I am. You know the way to the place where I am going.' Thomas said to him, 'Lord, we don't know where you are going, so how can we know the way?' Jesus answered, 'I am the way and the truth and the life. No one comes to the Father except through me.'\"",
-        reflectionQuestion: "What does it mean for your faith that Jesus says 'I am the way and the truth and the life'?"
+        title: "耶穌是道路、真理、生命",
+        scripture: "約翰福音 14:1-6\n「你們心裡不要憂愁；你們信神，也當信我。在我父的家裡有許多住處；若是沒有，我就早已告訴你們了。我去原是為你們預備地方去。我若去為你們預備了地方，就必再來接你們到我那裡去，我在那裡，叫你們也在那裡。我往哪裡去，你們知道；那條路，你們也知道。多馬對他說：『主啊，我們不知道你往哪裡去，怎麼知道那條路呢？』耶穌說：『我就是道路、真理、生命；若不藉著我，沒有人能到父那裡去。』」",
+        reflectionQuestion: "耶穌說「我就是道路、真理、生命」，這對你的信仰有什麼意義？"
       },
       {
         day: 2,
-        title: "All Things Work Together",
-        scripture: "Romans 8:28\n\"And we know that in all things God works for the good of those who love him, who have been called according to his purpose.\"",
-        reflectionQuestion: "How does this passage help you see God's good purpose in difficult times?"
+        title: "萬事互相效力",
+        scripture: "羅馬書 8:28\n「我們曉得萬事都互相效力，叫愛神的人得益處，就是按他旨意被召的人。」",
+        reflectionQuestion: "這段經文如何幫助你在困難中看見神的美意？"
       },
       {
         day: 3,
-        title: "Living Sacrifice and Renewal",
-        scripture: "Romans 12:1-2\n\"Therefore, I urge you, brothers and sisters, in view of God's mercy, to offer your bodies as a living sacrifice, holy and pleasing to God—this is your true and proper worship. Do not conform to the pattern of this world, but be transformed by the renewing of your mind. Then you will be able to test and approve what God's will is—his good, pleasing and perfect will.\"",
-        reflectionQuestion: "How can you offer yourself to God? How can you let your mind be renewed and transformed?"
+        title: "獻身與更新",
+        scripture: "羅馬書 12:1-2\n「所以，弟兄們，我以神的慈悲勸你們，將身體獻上，當作活祭，是聖潔的，是神所喜悅的；你們如此事奉乃是理所當然的。不要效法這個世界，只要心意更新而變化，叫你們察驗何為神的善良、純全、可喜悅的旨意。」",
+        reflectionQuestion: "你如何將自己獻給神？如何讓心意更新而變化？"
       },
       {
         day: 4,
-        title: "I Can Do All Things Through Christ",
-        scripture: "Philippians 4:13\n\"I can do all this through him who gives me strength.\"",
-        reflectionQuestion: "What challenges are you facing now? How can you learn to face them with Christ's strength?"
+        title: "靠基督凡事都能做",
+        scripture: "腓立比書 4:13\n「我靠著那加給我力量的，凡事都能做。」",
+        reflectionQuestion: "你現在面臨什麼挑戰？如何學習靠基督的力量去面對？"
       },
       {
         day: 5,
-        title: "Set Your Minds on Things Above",
-        scripture: "Colossians 3:1-4\n\"Since, then, you have been raised with Christ, set your hearts on things above, where Christ is, seated at the right hand of God. Set your minds on things above, not on earthly things. For you died, and your life is now hidden with Christ in God.\"",
-        reflectionQuestion: "What are 'things above'? How can you learn to set your mind more on heavenly things?"
+        title: "思念上面的事",
+        scripture: "歌羅西書 3:1-4\n「所以，你們若真與基督一同復活，就當求在上面的事；那裡有基督坐在神的右邊。你們要思念上面的事，不要思念地上的事。因為你們已經死了，你們的生命與基督一同藏在神裡面。」",
+        reflectionQuestion: "什麼是「上面的事」？你如何學習更多思念天上的事？"
       }
     ]
   },
-  // Week 7 - New Believer Life and Growth (Continued)
+  // 第 7 週 - 初信者生活與成長（續）
   {
     week: 7,
     days: [
       {
         day: 1,
-        title: "Do Not Worry, But Pray",
-        scripture: "Philippians 4:6-7\n\"Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God. And the peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus.\"",
-        reflectionQuestion: "How can you learn to replace worry with prayer, petition, and thanksgiving?"
+        title: "不要憂慮，要禱告",
+        scripture: "腓立比書 4:6-7\n「應當一無掛慮，只要凡事藉著禱告、祈求，和感謝，將你們所要的告訴神。神所賜出人意外的平安必在基督耶穌裡保守你們的心懷意念。」",
+        reflectionQuestion: "你如何學習用禱告、祈求、感謝來代替憂慮？"
       },
       {
         day: 2,
-        title: "Cast Your Cares on God",
-        scripture: "1 Peter 5:6-7\n\"Humble yourselves, therefore, under God's mighty hand, that he may lift you up in due time. Cast all your anxiety on him because he cares for you.\"",
-        reflectionQuestion: "What worries do you have now? How can you learn to cast these worries on God?"
+        title: "將憂慮卸給神",
+        scripture: "彼得前書 5:6-7\n「所以，你們要自卑，服在神大能的手下，到了時候他必叫你們升高。你們要將一切的憂慮卸給神，因為他顧念你們。」",
+        reflectionQuestion: "你現在有什麼憂慮？如何學習將這些憂慮卸給神？"
       },
       {
         day: 3,
-        title: "Overcoming Temptation",
-        scripture: "1 Corinthians 10:13\n\"No temptation has overtaken you except what is common to mankind. And God is faithful; he will not let you be tempted beyond what you can bear. But when you are tempted, he will also provide a way out so that you can endure it.\"",
-        reflectionQuestion: "What temptations are you currently facing? How can you learn to rely on God to overcome temptation?"
+        title: "勝過試探",
+        scripture: "哥林多前書 10:13\n「你們所遇見的試探，無非是人所能受的。神是信實的，必不叫你們受試探過於所能受的；在受試探的時候，總要給你們開一條出路，叫你們能忍受得住。」",
+        reflectionQuestion: "你目前面臨什麼試探？如何學習倚靠神勝過試探？"
       },
       {
         day: 4,
-        title: "Growth Through Trials",
-        scripture: "James 1:2-4\n\"Consider it pure joy, my brothers and sisters, whenever you face trials of many kinds, because you know that the testing of your faith produces perseverance. Let perseverance finish its work so that you may be mature and complete, not lacking anything.\"",
-        reflectionQuestion: "How can you learn to see opportunities for growth in trials?"
+        title: "試煉中的成長",
+        scripture: "雅各書 1:2-4\n「我的弟兄們，你們落在百般試煉中，都要以為大喜樂；因為知道你們的信心經過試驗，就生忍耐。但忍耐也當成功，使你們成全、完備，毫無缺欠。」",
+        reflectionQuestion: "你如何學習在試煉中看見成長的機會？"
       },
       {
         day: 5,
-        title: "The Fruit of the Spirit",
-        scripture: "Galatians 5:22-23\n\"But the fruit of the Spirit is love, joy, peace, forbearance, kindness, goodness, faithfulness, gentleness and self-control. Against such things there is no law.\"",
-        reflectionQuestion: "Which fruits of the Spirit do you hope to see in your life? How can you cooperate with the Spirit's work?"
+        title: "聖靈的果子",
+        scripture: "加拉太書 5:22-23\n「聖靈所結的果子，就是仁愛、喜樂、和平、忍耐、恩慈、良善、信實、溫柔、節制。這樣的事沒有律法禁止。」",
+        reflectionQuestion: "你希望聖靈在你生命中結出哪些果子？你如何配合聖靈的工作？"
       }
     ]
   },
-  // Week 8 - Church Life and Continued Growth
+  // 第 8 週 - 教會生活與持續成長
   {
     week: 8,
     days: [
       {
         day: 1,
-        title: "Do Not Give Up Meeting Together",
-        scripture: "Hebrews 10:24-25\n\"And let us consider how we may spur one another on toward love and good deeds, not giving up meeting together, as some are in the habit of doing, but encouraging one another—and all the more as you see the Day approaching.\"",
-        reflectionQuestion: "Why is it important to meet together with other Christians? How can you participate in church life?"
+        title: "不可停止聚會",
+        scripture: "希伯來書 10:24-25\n「又要彼此相顧，激發愛心，勉勵行善。你們不可停止聚會，好像那些停止慣了的人，倒要彼此勸勉，既看見那日子臨近，就更當如此。」",
+        reflectionQuestion: "為什麼與其他基督徒一起聚會很重要？你如何參與教會生活？"
       },
       {
         day: 2,
-        title: "The Value of Reading Scripture",
-        scripture: "2 Timothy 3:16-17\n\"All Scripture is God-breathed and is useful for teaching, rebuking, correcting and training in righteousness, so that the servant of God may be thoroughly equipped for every good work.\"",
-        reflectionQuestion: "Why is reading the Bible important for a Christian's growth? How do you plan to develop a habit of reading Scripture?"
+        title: "讀經的價值",
+        scripture: "提摩太後書 3:16-17\n「聖經都是神所默示的，於教訓、督責、使人歸正、教導人學義都是有益的，叫屬神的人得以完全，預備行各樣的善事。」",
+        reflectionQuestion: "為什麼讀聖經對基督徒的成長很重要？你打算如何建立讀經的習慣？"
       },
       {
         day: 3,
-        title: "Confession and Forgiveness",
-        scripture: "1 John 1:9\n\"If we confess our sins, he is faithful and just and will forgive us our sins and purify us from all unrighteousness.\"",
-        reflectionQuestion: "How can you learn to come before God daily in confession? How does God's forgiveness comfort you?"
+        title: "認罪與赦免",
+        scripture: "約翰一書 1:9\n「我們若認自己的罪，神是信實的，是公義的，必要赦免我們的罪，洗淨我們一切的不義。」",
+        reflectionQuestion: "你如何學習每天來到神面前認罪？神的赦免如何安慰你？"
       },
       {
         day: 4,
-        title: "Love One Another",
-        scripture: "1 John 4:7-11\n\"Dear friends, let us love one another, for love comes from God. Everyone who loves has been born of God and knows God. Whoever does not love does not know God, because God is love. This is how God showed his love among us: He sent his one and only Son into the world that we might live through him. This is love: not that we loved God, but that he loved us and sent his Son as an atoning sacrifice for our sins. Dear friends, since God so loved us, we also ought to love one another.\"",
-        reflectionQuestion: "How can you practice loving one another in your daily life? How does God's love motivate you to love others?"
+        title: "彼此相愛",
+        scripture: "約翰一書 4:7-11\n「親愛的弟兄啊，我們應當彼此相愛，因為愛是從神來的。凡有愛心的，都是由神而生，並且認識神。沒有愛心的，就不認識神，因為神就是愛。神差他獨生子到世間來，使我們藉著他得生，神愛我們的心在此就顯明了。不是我們愛神，乃是神愛我們，差他的兒子為我們的罪作了挽回祭，這就是愛了。親愛的弟兄啊，神既是這樣愛我們，我們也當彼此相愛。」",
+        reflectionQuestion: "你如何在生活中實踐彼此相愛？神的愛如何激勵你去愛別人？"
       },
       {
         day: 5,
-        title: "Jesus Knocks",
-        scripture: "Revelation 3:20\n\"Here I am! I stand at the door and knock. If anyone hears my voice and opens the door, I will come in and eat with that person, and they with me.\"",
-        reflectionQuestion: "Looking back on these 8 weeks of devotions, what is your greatest takeaway? How will you continue to walk with God and let Jesus be Lord of your life?"
+        title: "耶穌叩門",
+        scripture: "啟示錄 3:20\n「看哪，我站在門外叩門，若有聽見我聲音就開門的，我要進到他那裡去，我與他，他與我一同坐席。」",
+        reflectionQuestion: "回顧這8週的靈修，你最大的得著是什麼？你如何繼續與神同行，讓耶穌在你生命中作主？"
       }
     ]
   }
