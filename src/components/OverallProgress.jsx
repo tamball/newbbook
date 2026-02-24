@@ -11,7 +11,7 @@ const OverallProgress = () => {
   return (
     <div className="overall-progress-bar-chart">
       <div className="bar-chart-header">
-        <span className="bar-chart-title">📊 Overall Progress</span>
+        <span className="bar-chart-title">📊 整體進度</span>
         <span className="bar-chart-percentage">{percentage}%</span>
       </div>
       <div className="bar-chart-container">
@@ -23,7 +23,7 @@ const OverallProgress = () => {
         </div>
       </div>
       <div className="bar-chart-stats">
-        <span>{overall.completed} / {overall.total} days</span>
+        <span>{overall.completed} / {overall.total} 天</span>
       </div>
     </div>
   );

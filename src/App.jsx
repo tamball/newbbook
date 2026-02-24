@@ -65,7 +65,7 @@ function App() {
   };
 
   const handleResetSettings = () => {
-    if (window.confirm('Are you sure you want to reset settings? This will clear the start date and spiritual mentor information, but will not delete your devotional entries.')) {
+    if (window.confirm('確定要重設設定嗎？這會清除開始日期和屬靈導師資料，但不會刪除你的靈修記錄。')) {
       clearSettings();
       setView('setup');
       setShowSetup(true);
@@ -81,12 +81,12 @@ function App() {
       <header className="app-header">
         <div className="header-top">
           <div className="header-title">
-            <h1>🌟 New Believer Devotional</h1>
-            <p className="subtitle">8-Week Journey with God</p>
+            <h1>🌟 初信靈修記錄</h1>
+            <p className="subtitle">與神同行的 8 週靈修旅程</p>
           </div>
           {hasSettings() && view !== 'setup' && (
             <button onClick={handleResetSettings} className="reset-button">
-              🔄 Reset Settings
+              🔄 重設設定
             </button>
           )}
         </div>
@@ -99,7 +99,7 @@ function App() {
               ></div>
             </div>
             <p className="overall-progress-text">
-              Overall Progress: {overallProgress.completed} / {overallProgress.total} days ({overallPercentage}%)
+              整體進度：{overallProgress.completed} / {overallProgress.total} 天（{overallPercentage}%）
             </p>
           </div>
         )}
@@ -107,8 +107,8 @@ function App() {
 
       {view === null ? (
         <div style={{ textAlign: 'center', padding: '2rem', color: '#666', background: 'white', margin: '2rem', borderRadius: '10px' }}>
-          <h2>Loading...</h2>
-          <p>Checking settings...</p>
+          <h2>載入中...</h2>
+          <p>正在檢查設定...</p>
         </div>
       ) : showSetup ? (
         <SetupView onComplete={handleSetupComplete} />
@@ -130,7 +130,7 @@ function App() {
       )}
 
       <footer className="app-footer">
-        <p>May you build a deeper relationship with God during these 8 weeks ❤️</p>
+        <p>願你在這 8 週中與神建立更深的關係 ❤️</p>
       </footer>
     </div>
   );

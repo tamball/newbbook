@@ -22,8 +22,8 @@ const WeekView = ({ selectedWeek, onSelectWeek, onSelectDay }) => {
     return (
       <div className="week-view">
         <div className="week-header">
-          <h1>Error</h1>
-          <p>Week {selectedWeek} data not found</p>
+          <h1>錯誤</h1>
+          <p>找不到第 {selectedWeek} 週的資料</p>
         </div>
       </div>
     );
@@ -32,7 +32,7 @@ const WeekView = ({ selectedWeek, onSelectWeek, onSelectDay }) => {
   return (
     <div className="week-view">
       <div className="week-header">
-        <h1>Week {selectedWeek}</h1>
+        <h1>第 {selectedWeek} 週</h1>
         <div className="progress-container">
           <div className="progress-bar">
             <div className="progress-fill" style={{ width: `${(progress.completed / progress.total) * 100}%` }}></div>
@@ -47,9 +47,9 @@ const WeekView = ({ selectedWeek, onSelectWeek, onSelectDay }) => {
               </div>
             </div>
             <div className="progress-stats">
-              <p className="progress-text">{progress.completed} / {progress.total} days completed</p>
+              <p className="progress-text">已完成 {progress.completed} / {progress.total} 天</p>
               {progress.completed === progress.total && (
-                <p className="progress-complete">🎉 Week Complete!</p>
+                <p className="progress-complete">🎉 本週完成！</p>
               )}
             </div>
           </div>
@@ -68,8 +68,8 @@ const WeekView = ({ selectedWeek, onSelectWeek, onSelectDay }) => {
               onClick={() => onSelectDay(dayData.day)}
             >
               <div className="day-header-row">
-                <div className="day-number">Day {dayData.day} {dayDate && <span className="day-date">({dayDate.split(',')[0]})</span>}</div>
-                {completed && <span className="completion-badge">✓ Completed</span>}
+                <div className="day-number">第 {dayData.day} 天 {dayDate && <span className="day-date">({dayDate.split(',')[0]})</span>}</div>
+                {completed && <span className="completion-badge">✓ 已完成</span>}
               </div>
               <h3 className="day-title">{dayData.title}</h3>
               <div className="day-preview">
@@ -86,12 +86,12 @@ const WeekView = ({ selectedWeek, onSelectWeek, onSelectDay }) => {
             onClick={() => onSelectDay(6)}
           >
             <div className="day-header-row">
-              <div className="day-number">Saturday {getDayDate(6) && <span className="day-date">({getDayDate(6).split(',')[0]})</span>}</div>
-              <span className="reading-badge">📖 Reading Day</span>
+              <div className="day-number">星期六 {getDayDate(6) && <span className="day-date">({getDayDate(6).split(',')[0]})</span>}</div>
+              <span className="reading-badge">📖 經文閱讀日</span>
             </div>
             <h3 className="day-title">📖 {saturdayData.title}</h3>
             <div className="day-preview">
-              Full chapter reading, no entry required
+              閱讀整章經文，無需填寫內容
             </div>
           </div>
         )}
@@ -103,12 +103,12 @@ const WeekView = ({ selectedWeek, onSelectWeek, onSelectDay }) => {
             onClick={() => onSelectDay(7)}
           >
             <div className="day-header-row">
-              <div className="day-number">Sunday {getDayDate(7) && <span className="day-date">({getDayDate(7).split(',')[0]})</span>}</div>
-              {isDayCompleted(selectedWeek, 7) && <span className="completion-badge">✓ Completed</span>}
+              <div className="day-number">主日 {getDayDate(7) && <span className="day-date">({getDayDate(7).split(',')[0]})</span>}</div>
+              {isDayCompleted(selectedWeek, 7) && <span className="completion-badge">✓ 已完成</span>}
             </div>
             <h3 className="day-title">✝️ {sundayData.title}</h3>
             <div className="day-preview">
-              Record Sunday service sermon notes
+              記錄主日崇拜的聽道筆記
             </div>
           </div>
         )}
@@ -117,12 +117,12 @@ const WeekView = ({ selectedWeek, onSelectWeek, onSelectDay }) => {
       <div className="week-navigation">
         {selectedWeek > 1 && (
           <button onClick={() => onSelectWeek(selectedWeek - 1)} className="nav-button">
-            ← Previous Week
+            ← 上一週
           </button>
         )}
         {selectedWeek < 8 && (
           <button onClick={() => onSelectWeek(selectedWeek + 1)} className="nav-button">
-            Next Week →
+            下一週 →
           </button>
         )}
       </div>

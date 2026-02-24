@@ -23,57 +23,57 @@ export const generateEmailContent = (week, day, entry) => {
   const currentDate = getActualDate(week, day);
   const dateStr = currentDate ? formatDate(currentDate) : '';
 
-  const dayLabel = isSunday ? 'Sunday' : `Day ${day}`;
+  const dayLabel = isSunday ? '主日' : `第 ${day} 天`;
   
-  const subject = `Week ${week} ${dayLabel} Devotional Entry - ${dayData.title}`;
+  const subject = `第 ${week} 週 ${dayLabel} 靈修記錄 - ${dayData.title}`;
+  
+  let body = `${settings.mentorName} 牧者／導師，主內平安：
 
-  let body = `Dear ${settings.mentorName},
-
-Below is my devotional entry for Week ${week} ${dayLabel}:
+以下是我第 ${week} 週 ${dayLabel} 的靈修記錄：
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-📅 Date: ${dateStr}
-📖 Topic: ${dayData.title}
+📅 日期：${dateStr}
+📖 主題：${dayData.title}
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`;
 
   if (isSunday) {
     body += `
 
-【Sermon Notes】
-${entry.sermonNotes || '(Not filled in yet)'}`;
+【主日信息筆記】
+${entry.sermonNotes || '（尚未填寫）'}`;
   } else {
     body += `
 
-【Today's Scripture】
+【今日經文】
 ${dayData.scripture}
 
-【Reflection Question】
+【思考問題】
 ${dayData.reflectionQuestion}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-【My Devotional Entry】
+【我的靈修記錄】
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-📝 Main Content:
-${entry.mainContent || '(Not filled in yet)'}
+📝 經文主要內容：
+${entry.mainContent || '（尚未填寫）'}
 
-❤️ Personal Reflection:
-${entry.personalReflection || '(Not filled in yet)'}
+❤️ 個人感受：
+${entry.personalReflection || '（尚未填寫）'}
 
-🎯 Application:
-${entry.application || '(Not filled in yet)'}
+🎯 實際應用：
+${entry.application || '（尚未填寫）'}
 
-🙏 Prayer:
-${entry.prayer || '(Not filled in yet)'}`;
+🙏 禱告：
+${entry.prayer || '（尚未填寫）'}`;
   }
-
+  
   body += `
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-May God bless you!
+願主親自帶領與祝福！
 
-${new Date().toLocaleDateString('en-US')}`;
+${new Date().toLocaleDateString('zh-HK')}`;
 
   return { subject, body };
 };
@@ -83,7 +83,7 @@ export const sendEmail = (week, day, entry) => {
   const settings = getSettings();
   
   if (!settings || !settings.mentorEmail) {
-    alert('Error: Spiritual mentor email address not found. Please reset settings.');
+    alert('錯誤：找不到屬靈導師的電郵地址，請先重設設定。');
     return;
   }
 

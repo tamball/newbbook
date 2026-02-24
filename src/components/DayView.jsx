@@ -59,7 +59,7 @@ const DayView = ({ week, day, onBack }) => {
     saveEntry(week, day, formData);
     setTimeout(() => {
       setIsSaving(false);
-      alert('Saved!');
+      alert('已儲存！');
     }, 300);
   };
 
@@ -70,7 +70,7 @@ const DayView = ({ week, day, onBack }) => {
   const handleSendEmail = () => {
     const settings = getSettings();
     if (!settings || !settings.mentorEmail) {
-      alert('Error: Spiritual mentor email address not found. Please reset settings.');
+      alert('錯誤：找不到屬靈導師的電郵地址，請先重設設定。');
       return;
     }
 
@@ -84,7 +84,7 @@ const DayView = ({ week, day, onBack }) => {
     }
     
     if (!hasContent) {
-      if (!confirm('You haven\'t filled in any content yet. Are you sure you want to send?')) {
+      if (!confirm('你還沒有填寫任何內容，確定要發送嗎？')) {
         return;
       }
     }
@@ -101,17 +101,17 @@ const DayView = ({ week, day, onBack }) => {
   if (isSaturday) {
     return (
       <div className="day-view">
-        <button onClick={onBack} className="back-button">← Back to Weeks</button>
+        <button onClick={onBack} className="back-button">← 返回每週列表</button>
         
         <div className="day-header">
-          <h1>Week {week} - Saturday</h1>
+          <h1>第 {week} 週 - 星期六</h1>
           {dateStr && <p className="actual-date">📅 {dateStr}</p>}
           <h2>{dayData.title}</h2>
         </div>
 
         <div className="scripture-section saturday-reading">
-          <h3>📖 Full Chapter Reading</h3>
-          <p className="reading-hint">Please read the following scripture quietly and meditate on God's word. No entry is required today—just read and reflect with your heart.</p>
+          <h3>📖 整章經文閱讀</h3>
+          <p className="reading-hint">請安靜閱讀以下經文，默想神的話。今天不用填寫內容，只需專心閱讀和思想。</p>
           <div className="scripture-text full-chapter">
             {dayData.scripture.split('\n').map((line, idx) => (
               <p key={idx}>{line}</p>
@@ -126,24 +126,24 @@ const DayView = ({ week, day, onBack }) => {
   if (isSunday) {
     return (
       <div className="day-view">
-        <button onClick={onBack} className="back-button">← Back to Weeks</button>
+        <button onClick={onBack} className="back-button">← 返回每週列表</button>
         
         <div className="day-header">
-          <h1>Week {week} - Sunday</h1>
+          <h1>第 {week} 週 - 主日</h1>
           {dateStr && <p className="actual-date">📅 {dateStr}</p>}
           <h2>{dayData.title}</h2>
         </div>
 
         <div className="sermon-section">
-          <h3>✝️ Sunday Service</h3>
+          <h3>✝️ 主日崇拜</h3>
           <p className="sermon-description">{dayData.description}</p>
         </div>
 
         <div className="entry-section">
           <div className="entry-field">
             <label htmlFor="sermonNotes">
-              <h3>📝 Sermon Notes</h3>
-              <p className="field-hint">Please record the message, scripture, key points, and insights you heard in today's Sunday service</p>
+              <h3>📝 信息筆記</h3>
+              <p className="field-hint">請記錄今天主日崇拜的信息、經文、重點與你的得著</p>
             </label>
             <textarea
               id="sermonNotes"
@@ -152,7 +152,7 @@ const DayView = ({ week, day, onBack }) => {
                 handleChange('sermonNotes', e.target.value);
                 handleAutoSave();
               }}
-              placeholder="Please record today's message..."
+              placeholder="請寫下今天的信息內容..."
               rows={12}
             />
           </div>
@@ -161,15 +161,15 @@ const DayView = ({ week, day, onBack }) => {
         <div className="save-section">
           <div className="save-buttons">
             <button onClick={handleSave} className="save-button" disabled={isSaving}>
-              {isSaving ? 'Saving...' : '💾 Manual Save'}
+              {isSaving ? '儲存中...' : '💾 手動儲存'}
             </button>
             {settings && settings.mentorEmail && (
               <button onClick={handleSendEmail} className="send-email-button">
-                📧 Send to Mentor
+                📧 傳送給屬靈導師
               </button>
             )}
           </div>
-          <p className="auto-save-hint">* Content is auto-saved</p>
+          <p className="auto-save-hint">* 內容會自動儲存</p>
         </div>
       </div>
     );
@@ -178,16 +178,16 @@ const DayView = ({ week, day, onBack }) => {
   // Weekdays (Monday to Friday): Normal devotional entry
   return (
     <div className="day-view">
-      <button onClick={onBack} className="back-button">← Back to Weeks</button>
+      <button onClick={onBack} className="back-button">← 返回每週列表</button>
       
       <div className="day-header">
-        <h1>Week {week} - Day {day}</h1>
+        <h1>第 {week} 週 - 第 {day} 天</h1>
         {dateStr && <p className="actual-date">📅 {dateStr}</p>}
         <h2>{dayData.title}</h2>
       </div>
 
       <div className="scripture-section">
-        <h3>📖 Today's Scripture</h3>
+        <h3>📖 今日經文</h3>
         <div className="scripture-text">
           {dayData.scripture.split('\n').map((line, idx) => (
             <p key={idx}>{line}</p>
@@ -196,15 +196,15 @@ const DayView = ({ week, day, onBack }) => {
       </div>
 
       <div className="reflection-section">
-        <h3>💭 Reflection Question</h3>
+        <h3>💭 思考問題</h3>
         <p className="reflection-question">{dayData.reflectionQuestion}</p>
       </div>
 
       <div className="entry-section">
         <div className="entry-field">
           <label htmlFor="mainContent">
-            <h3>📝 Main Content</h3>
-            <p className="field-hint">Write the main content of this passage in your own words</p>
+            <h3>📝 經文主要內容</h3>
+            <p className="field-hint">用你自己的話寫下這段經文的主要內容</p>
           </label>
           <textarea
             id="mainContent"
@@ -213,15 +213,15 @@ const DayView = ({ week, day, onBack }) => {
               handleChange('mainContent', e.target.value);
               handleAutoSave();
             }}
-            placeholder="Please write the main content of this passage..."
+            placeholder="請寫下這段經文的主要內容..."
             rows={6}
           />
         </div>
 
         <div className="entry-field">
           <label htmlFor="personalReflection">
-            <h3>❤️ Personal Reflection</h3>
-            <p className="field-hint">How does this passage touch you? What are your feelings?</p>
+            <h3>❤️ 個人感受</h3>
+            <p className="field-hint">這段經文如何觸動你？你的感受是什麼？</p>
           </label>
           <textarea
             id="personalReflection"
@@ -230,15 +230,15 @@ const DayView = ({ week, day, onBack }) => {
               handleChange('personalReflection', e.target.value);
               handleAutoSave();
             }}
-            placeholder="Please share your feelings..."
+            placeholder="請寫下你的感受..."
             rows={6}
           />
         </div>
 
         <div className="entry-field">
           <label htmlFor="application">
-            <h3>🎯 Application</h3>
-            <p className="field-hint">How can you apply this passage to your life?</p>
+            <h3>🎯 實際應用</h3>
+            <p className="field-hint">你可以如何將這段經文應用在生活中？</p>
           </label>
           <textarea
             id="application"
@@ -247,15 +247,15 @@ const DayView = ({ week, day, onBack }) => {
               handleChange('application', e.target.value);
               handleAutoSave();
             }}
-            placeholder="Please write down practical applications..."
+            placeholder="請寫下實際可以採取的行動..."
             rows={6}
           />
         </div>
 
         <div className="entry-field">
           <label htmlFor="prayer">
-            <h3>🙏 Prayer</h3>
-            <p className="field-hint">Write down your prayer</p>
+            <h3>🙏 禱告</h3>
+            <p className="field-hint">寫下你向天父的禱告</p>
           </label>
           <textarea
             id="prayer"
@@ -264,7 +264,7 @@ const DayView = ({ week, day, onBack }) => {
               handleChange('prayer', e.target.value);
               handleAutoSave();
             }}
-            placeholder="Dear Heavenly Father..."
+            placeholder="親愛的天父......"
             rows={6}
           />
         </div>
@@ -273,18 +273,18 @@ const DayView = ({ week, day, onBack }) => {
       <div className="save-section">
         <div className="save-buttons">
           <button onClick={handleSave} className="save-button" disabled={isSaving}>
-            {isSaving ? 'Saving...' : '💾 Manual Save'}
+            {isSaving ? '儲存中...' : '💾 手動儲存'}
           </button>
           {settings && settings.mentorEmail && (
             <button onClick={handleSendEmail} className="send-email-button">
-              📧 Send to Mentor
+              📧 傳送給屬靈導師
             </button>
           )}
         </div>
-        <p className="auto-save-hint">* Content is auto-saved</p>
+        <p className="auto-save-hint">* 內容會自動儲存</p>
         {settings && settings.mentorEmail && (
           <p className="email-hint">
-            💡 Clicking "Send to Mentor" will open your email client and send today's devotional entry to {settings.mentorName}
+            💡 按「傳送給屬靈導師」會開啟你的電郵程式，並把今天的靈修記錄發送給 {settings.mentorName}
           </p>
         )}
       </div>

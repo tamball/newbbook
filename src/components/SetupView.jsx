@@ -112,19 +112,19 @@ const SetupView = ({ onComplete }) => {
     const newErrors = {};
 
     if (!formData.startDate) {
-      newErrors.startDate = 'Please select a start date';
+      newErrors.startDate = '請選擇開始日期';
     } else if (!isMonday(formData.startDate)) {
-      newErrors.startDate = 'Start date must be a Monday';
+      newErrors.startDate = '開始日期必須是星期一';
     }
 
     if (!formData.mentorName.trim()) {
-      newErrors.mentorName = 'Please enter your spiritual mentor\'s name';
+      newErrors.mentorName = '請輸入屬靈導師姓名';
     }
 
     if (!formData.mentorEmail.trim()) {
-      newErrors.mentorEmail = 'Please enter your spiritual mentor\'s email';
+      newErrors.mentorEmail = '請輸入屬靈導師電郵地址';
     } else if (!validateEmail(formData.mentorEmail)) {
-      newErrors.mentorEmail = 'Please enter a valid email address';
+      newErrors.mentorEmail = '請輸入有效的電郵地址';
     }
 
     if (Object.keys(newErrors).length > 0) {
@@ -151,15 +151,15 @@ const SetupView = ({ onComplete }) => {
     <div className="setup-view">
       <div className="setup-container">
         <div className="setup-header">
-          <h1>🌟 Welcome to Your Devotional Journey!</h1>
-          <p className="setup-subtitle">Please fill in the following information to set up your personalized devotional journal</p>
+          <h1>🌟 歡迎開始你的靈修旅程！</h1>
+          <p className="setup-subtitle">請先填寫以下資料，以建立你個人的靈修記錄本</p>
         </div>
 
         <form onSubmit={handleSubmit} className="setup-form">
           <div className="form-field">
             <label htmlFor="startDate">
-              <h3>📅 Start Date</h3>
-              <p className="field-hint">Select the date you want to start this 8-week devotional plan (must be a Monday)</p>
+              <h3>📅 開始日期</h3>
+              <p className="field-hint">選擇你想開始這 8 週靈修計劃的日期（必須是星期一）</p>
             </label>
             <input
               type="date"
@@ -174,15 +174,15 @@ const SetupView = ({ onComplete }) => {
 
           <div className="form-field">
             <label htmlFor="mentorName">
-              <h3>👤 Spiritual Mentor Name</h3>
-              <p className="field-hint">Your spiritual mentor or companion's name</p>
+              <h3>👤 屬靈導師姓名</h3>
+              <p className="field-hint">你的屬靈導師或同行者的名字</p>
             </label>
             <input
               type="text"
               id="mentorName"
               value={formData.mentorName}
               onChange={(e) => handleChange('mentorName', e.target.value)}
-              placeholder="e.g., Pastor John"
+              placeholder="例如：陳牧師"
               className={errors.mentorName ? 'error' : ''}
             />
             {errors.mentorName && <span className="error-message">{errors.mentorName}</span>}
@@ -190,15 +190,15 @@ const SetupView = ({ onComplete }) => {
 
           <div className="form-field">
             <label htmlFor="mentorEmail">
-              <h3>📧 Spiritual Mentor Email</h3>
-              <p className="field-hint">Your spiritual mentor's email address (for sending devotional entries)</p>
+              <h3>📧 屬靈導師電郵</h3>
+              <p className="field-hint">屬靈導師的電郵地址（用來接收你的靈修記錄）</p>
             </label>
             <input
               type="email"
               id="mentorEmail"
               value={formData.mentorEmail}
               onChange={(e) => handleChange('mentorEmail', e.target.value)}
-              placeholder="e.g., mentor@example.com"
+              placeholder="例如：mentor@example.com"
               className={errors.mentorEmail ? 'error' : ''}
             />
             {errors.mentorEmail && <span className="error-message">{errors.mentorEmail}</span>}
@@ -206,13 +206,13 @@ const SetupView = ({ onComplete }) => {
 
           <div className="form-actions">
             <button type="submit" className="submit-button">
-              Start Devotional Journey ✨
+              開始 8 週靈修旅程 ✨
             </button>
           </div>
         </form>
 
         <div className="setup-info">
-          <p>💡 Tip: After completing the setup, you can send your devotional entries to your spiritual mentor daily, allowing them to accompany you in your growth.</p>
+          <p>💡 小貼士：完成設定後，你可以每天把靈修記錄電郵給屬靈導師，讓他／她在屬靈上陪伴你成長。</p>
         </div>
       </div>
     </div>
