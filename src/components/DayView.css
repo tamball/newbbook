@@ -50,35 +50,6 @@
   font-weight: 600;
 }
 
-.day-header h2.bilingual-title.zh,
-.day-title.zh {
-  font-size: 1.25rem;
-  color: #555;
-  margin-top: 0.25rem;
-}
-
-.scripture-lang-label {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #667eea;
-  margin-top: 1rem;
-  margin-bottom: 0.25rem;
-}
-
-.scripture-lang-label:first-child {
-  margin-top: 0;
-}
-
-.scripture-zh {
-  font-family: inherit;
-}
-
-.reflection-question.zh {
-  margin-top: 0.75rem;
-  padding-top: 0.75rem;
-  border-top: 1px dashed #eee;
-}
-
 .scripture-section,
 .reflection-section {
   background: white;

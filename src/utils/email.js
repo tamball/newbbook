@@ -2,14 +2,10 @@ import { getSettings } from './storage';
 import { devotionalData } from '../data/devotionalData';
 import { weekendData } from '../data/weekendData';
 import { getActualDate, formatDate } from './dateUtils';
-import { t } from './i18n';
 
-const notFilled = (lang) => (lang === 'en' ? '(not filled)' : '（尚未填寫）');
-
-// Generate email content (uses language from settings)
+// Generate email content
 export const generateEmailContent = (week, day, entry) => {
   const settings = getSettings();
-  const lang = settings?.language || 'zh';
   const isSunday = day === 7;
   const isSaturday = day === 6;
   
@@ -23,65 +19,61 @@ export const generateEmailContent = (week, day, entry) => {
     dayData = weekData.days.find(d => d.day === day);
   }
   
+  // Calculate date (based on start date, 7 days per week)
   const currentDate = getActualDate(week, day);
   const dateStr = currentDate ? formatDate(currentDate) : '';
-  const dayLabel = isSunday ? t('sunday', lang) : t('dayLabel', lang, { day });
+
+  const dayLabel = isSunday ? '主日' : `第 ${day} 天`;
   
-  const titleDisplay = (dayData.titleEn ?? dayData.title) && (dayData.titleZh ?? dayData.title)
-    ? `${dayData.titleEn ?? dayData.title} · ${dayData.titleZh ?? dayData.title}`
-    : (dayData.title || '');
-  const subject = (lang === 'en'
-    ? `Week ${week} ${dayLabel} devotional - ${titleDisplay}`
-    : `第 ${week} 週 ${dayLabel} 靈修記錄 - ${titleDisplay}`);
+  const subject = `第 ${week} 週 ${dayLabel} 靈修記錄 - ${dayData.title}`;
   
-  const greeting = lang === 'en'
-    ? `${settings.mentorName},\n\nHere is my devotional entry for week ${week}, ${dayLabel}:\n\n`
-    : `${settings.mentorName} 牧者／導師，主內平安：\n\n以下是我第 ${week} 週 ${dayLabel} 的靈修記錄：\n\n`;
-  let body = `${greeting}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-📅 ${lang === 'en' ? 'Date' : '日期'}：${dateStr}
-📖 ${lang === 'en' ? 'Topic' : '主題'}：${titleDisplay}
+  let body = `${settings.mentorName} 牧者／導師，主內平安：
+
+以下是我第 ${week} 週 ${dayLabel} 的靈修記錄：
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📅 日期：${dateStr}
+📖 主題：${dayData.title}
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`;
 
   if (isSunday) {
     body += `
 
-【${t('sermonNotes', lang)}】
-${entry.sermonNotes || notFilled(lang)}`;
+【主日信息筆記】
+${entry.sermonNotes || '（尚未填寫）'}`;
   } else {
-    const scripture = lang === 'zh' ? (dayData.scriptureZh ?? dayData.scripture) : (dayData.scriptureEn ?? dayData.scripture);
-    const reflectionQ = lang === 'zh' ? (dayData.reflectionQuestionZh ?? dayData.reflectionQuestion) : (dayData.reflectionQuestionEn ?? dayData.reflectionQuestion);
     body += `
 
-【${t('todayScripture', lang)}】
-${scripture}
+【今日經文】
+${dayData.scripture}
 
-【${t('reflectionQuestion', lang)}】
-${reflectionQ || ''}
+【思考問題】
+${dayData.reflectionQuestion}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-【${lang === 'en' ? 'My entry' : '我的靈修記錄'}】
+【我的靈修記錄】
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-📝 ${t('mainContent', lang)}：
-${entry.mainContent || notFilled(lang)}
+📝 經文主要內容：
+${entry.mainContent || '（尚未填寫）'}
 
-❤️ ${t('personalReflection', lang)}：
-${entry.personalReflection || notFilled(lang)}
+❤️ 個人感受：
+${entry.personalReflection || '（尚未填寫）'}
 
-🎯 ${t('application', lang)}：
-${entry.application || notFilled(lang)}
+🎯 實際應用：
+${entry.application || '（尚未填寫）'}
 
-🙏 ${t('prayer', lang)}：
-${entry.prayer || notFilled(lang)}`;
+🙏 禱告：
+${entry.prayer || '（尚未填寫）'}`;
   }
   
   body += `
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-${lang === 'en' ? 'Blessings!' : '願主親自帶領與祝福！'}
+願主親自帶領與祝福！
 
-${new Date().toLocaleDateString(lang === 'en' ? 'en-US' : 'zh-HK')}`;
+${new Date().toLocaleDateString('zh-HK')}`;
 
   return { subject, body };
 };
@@ -89,10 +81,9 @@ ${new Date().toLocaleDateString(lang === 'en' ? 'en-US' : 'zh-HK')}`;
 // Send email (using mailto link)
 export const sendEmail = (week, day, entry) => {
   const settings = getSettings();
-  const lang = settings?.language || 'zh';
   
   if (!settings || !settings.mentorEmail) {
-    alert(t('errorNoMentorEmail', lang));
+    alert('錯誤：找不到屬靈導師的電郵地址，請先重設設定。');
     return;
   }
 
