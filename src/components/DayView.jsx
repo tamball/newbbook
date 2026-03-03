@@ -4,7 +4,16 @@ import { devotionalData } from '../data/devotionalData';
 import { weekendData } from '../data/weekendData';
 import { sendEmail } from '../utils/email';
 import { getActualDate, formatDate } from '../utils/dateUtils';
+import { t } from '../utils/i18n';
 import './DayView.css';
+
+// Normalize day data to always have bilingual fields (fallback to single field)
+const getTitleEn = (d) => d?.titleEn ?? d?.title ?? '';
+const getTitleZh = (d) => d?.titleZh ?? d?.title ?? '';
+const getScriptureEn = (d) => d?.scriptureEn ?? d?.scripture ?? '';
+const getScriptureZh = (d) => d?.scriptureZh ?? d?.scripture ?? '';
+const getReflectionEn = (d) => d?.reflectionQuestionEn ?? d?.reflectionQuestion ?? '';
+const getReflectionZh = (d) => d?.reflectionQuestionZh ?? d?.reflectionQuestion ?? '';
 
 const DayView = ({ week, day, onBack }) => {
   // Determine if Saturday, Sunday, or weekday
@@ -17,6 +26,7 @@ const DayView = ({ week, day, onBack }) => {
   
   const dayData = isSaturday ? saturdayData : isSunday ? sundayData : weekData?.days.find(d => d.day === day);
   const savedEntry = getEntry(week, day);
+  const lang = getSettings()?.language || 'zh';
 
   const [formData, setFormData] = useState({
     mainContent: savedEntry?.mainContent || '',
@@ -59,7 +69,7 @@ const DayView = ({ week, day, onBack }) => {
     saveEntry(week, day, formData);
     setTimeout(() => {
       setIsSaving(false);
-      alert('已儲存！');
+      alert(t('savedAlert', getSettings()?.language || 'zh'));
     }, 300);
   };
 
@@ -70,7 +80,7 @@ const DayView = ({ week, day, onBack }) => {
   const handleSendEmail = () => {
     const settings = getSettings();
     if (!settings || !settings.mentorEmail) {
-      alert('錯誤：找不到屬靈導師的電郵地址，請先重設設定。');
+      alert(t('errorNoMentorEmail', lang));
       return;
     }
 
@@ -84,7 +94,7 @@ const DayView = ({ week, day, onBack }) => {
     }
     
     if (!hasContent) {
-      if (!confirm('你還沒有填寫任何內容，確定要發送嗎？')) {
+      if (!confirm(t('confirmSendEmpty', lang))) {
         return;
       }
     }
@@ -101,19 +111,19 @@ const DayView = ({ week, day, onBack }) => {
   if (isSaturday) {
     return (
       <div className="day-view">
-        <button onClick={onBack} className="back-button">← 返回每週列表</button>
+        <button onClick={onBack} className="back-button">{t('backToWeeks', lang)}</button>
         
         <div className="day-header">
-          <h1>第 {week} 週 - 星期六</h1>
+          <h1>{t('weekSaturday', lang, { week })}</h1>
           {dateStr && <p className="actual-date">📅 {dateStr}</p>}
-          <h2>{dayData.title}</h2>
+          <h2 className="day-subtitle">{lang === 'zh' ? (dayData.titleZh ?? dayData.title) : (dayData.titleEn ?? dayData.title)}</h2>
         </div>
 
         <div className="scripture-section saturday-reading">
-          <h3>📖 整章經文閱讀</h3>
-          <p className="reading-hint">請安靜閱讀以下經文，默想神的話。今天不用填寫內容，只需專心閱讀和思想。</p>
+          <h3>📖 {t('fullChapterReading', lang)}</h3>
+          <p className="reading-hint">{t('fullChapterHint', lang)}</p>
           <div className="scripture-text full-chapter">
-            {dayData.scripture.split('\n').map((line, idx) => (
+            {(lang === 'zh' ? (dayData.scriptureZh ?? dayData.scripture) : (dayData.scriptureEn ?? dayData.scripture) || '').split('\n').filter(Boolean).map((line, idx) => (
               <p key={idx}>{line}</p>
             ))}
           </div>
@@ -126,24 +136,26 @@ const DayView = ({ week, day, onBack }) => {
   if (isSunday) {
     return (
       <div className="day-view">
-        <button onClick={onBack} className="back-button">← 返回每週列表</button>
+        <button onClick={onBack} className="back-button">{t('backToWeeks', lang)}</button>
         
         <div className="day-header">
-          <h1>第 {week} 週 - 主日</h1>
+          <h1>{t('weekSunday', lang, { week })}</h1>
           {dateStr && <p className="actual-date">📅 {dateStr}</p>}
-          <h2>{dayData.title}</h2>
+          <h2 className="day-subtitle">{lang === 'zh' ? (dayData.titleZh ?? dayData.title) : (dayData.titleEn ?? dayData.title)}</h2>
         </div>
 
         <div className="sermon-section">
-          <h3>✝️ 主日崇拜</h3>
-          <p className="sermon-description">{dayData.description}</p>
+          <h3>✝️ {t('sermonNotes', lang)}</h3>
+          <p className="sermon-description">
+            {lang === 'zh' ? (dayData.descriptionZh ?? dayData.description) : (dayData.descriptionEn ?? dayData.description) || ''}
+          </p>
         </div>
 
         <div className="entry-section">
           <div className="entry-field">
             <label htmlFor="sermonNotes">
-              <h3>📝 信息筆記</h3>
-              <p className="field-hint">請記錄今天主日崇拜的信息、經文、重點與你的得著</p>
+              <h3>{t('sermonNotesLabel', lang)}</h3>
+              <p className="field-hint">{t('sermonNotesHint', lang)}</p>
             </label>
             <textarea
               id="sermonNotes"
@@ -152,7 +164,7 @@ const DayView = ({ week, day, onBack }) => {
                 handleChange('sermonNotes', e.target.value);
                 handleAutoSave();
               }}
-              placeholder="請寫下今天的信息內容..."
+              placeholder={t('sermonNotesPlaceholder', lang)}
               rows={12}
             />
           </div>
@@ -161,15 +173,15 @@ const DayView = ({ week, day, onBack }) => {
         <div className="save-section">
           <div className="save-buttons">
             <button onClick={handleSave} className="save-button" disabled={isSaving}>
-              {isSaving ? '儲存中...' : '💾 手動儲存'}
+              {isSaving ? t('saving', lang) : t('manualSave', lang)}
             </button>
             {settings && settings.mentorEmail && (
               <button onClick={handleSendEmail} className="send-email-button">
-                📧 傳送給屬靈導師
+                {t('sendToMentor', lang)}
               </button>
             )}
           </div>
-          <p className="auto-save-hint">* 內容會自動儲存</p>
+          <p className="auto-save-hint">{t('autoSaveHint', lang)}</p>
         </div>
       </div>
     );
@@ -178,33 +190,33 @@ const DayView = ({ week, day, onBack }) => {
   // Weekdays (Monday to Friday): Normal devotional entry
   return (
     <div className="day-view">
-      <button onClick={onBack} className="back-button">← 返回每週列表</button>
+      <button onClick={onBack} className="back-button">{t('backToWeeks', lang)}</button>
       
       <div className="day-header">
-        <h1>第 {week} 週 - 第 {day} 天</h1>
+        <h1>{t('weekDay', lang, { week, day })}</h1>
         {dateStr && <p className="actual-date">📅 {dateStr}</p>}
-        <h2>{dayData.title}</h2>
+        <h2 className="day-subtitle">{lang === 'zh' ? getTitleZh(dayData) : getTitleEn(dayData)}</h2>
       </div>
 
       <div className="scripture-section">
-        <h3>📖 今日經文</h3>
+        <h3>📖 {t('todayScripture', lang)}</h3>
         <div className="scripture-text">
-          {dayData.scripture.split('\n').map((line, idx) => (
+          {(lang === 'zh' ? getScriptureZh(dayData) : getScriptureEn(dayData) || '').split('\n').filter(Boolean).map((line, idx) => (
             <p key={idx}>{line}</p>
           ))}
         </div>
       </div>
 
       <div className="reflection-section">
-        <h3>💭 思考問題</h3>
-        <p className="reflection-question">{dayData.reflectionQuestion}</p>
+        <h3>💭 {t('reflectionQuestion', lang)}</h3>
+        <p className="reflection-question">{lang === 'zh' ? getReflectionZh(dayData) : getReflectionEn(dayData)}</p>
       </div>
 
       <div className="entry-section">
         <div className="entry-field">
           <label htmlFor="mainContent">
-            <h3>📝 經文主要內容</h3>
-            <p className="field-hint">用你自己的話寫下這段經文的主要內容</p>
+            <h3>📝 {t('mainContent', lang)}</h3>
+            <p className="field-hint">{t('mainContentHint', lang)}</p>
           </label>
           <textarea
             id="mainContent"
@@ -213,15 +225,15 @@ const DayView = ({ week, day, onBack }) => {
               handleChange('mainContent', e.target.value);
               handleAutoSave();
             }}
-            placeholder="請寫下這段經文的主要內容..."
+            placeholder={t('mainContentPlaceholder', lang)}
             rows={6}
           />
         </div>
 
         <div className="entry-field">
           <label htmlFor="personalReflection">
-            <h3>❤️ 個人感受</h3>
-            <p className="field-hint">這段經文如何觸動你？你的感受是什麼？</p>
+            <h3>❤️ {t('personalReflection', lang)}</h3>
+            <p className="field-hint">{t('personalReflectionHint', lang)}</p>
           </label>
           <textarea
             id="personalReflection"
@@ -230,15 +242,15 @@ const DayView = ({ week, day, onBack }) => {
               handleChange('personalReflection', e.target.value);
               handleAutoSave();
             }}
-            placeholder="請寫下你的感受..."
+            placeholder={t('personalReflectionPlaceholder', lang)}
             rows={6}
           />
         </div>
 
         <div className="entry-field">
           <label htmlFor="application">
-            <h3>🎯 實際應用</h3>
-            <p className="field-hint">你可以如何將這段經文應用在生活中？</p>
+            <h3>🎯 {t('application', lang)}</h3>
+            <p className="field-hint">{t('applicationHint', lang)}</p>
           </label>
           <textarea
             id="application"
@@ -247,15 +259,15 @@ const DayView = ({ week, day, onBack }) => {
               handleChange('application', e.target.value);
               handleAutoSave();
             }}
-            placeholder="請寫下實際可以採取的行動..."
+            placeholder={t('applicationPlaceholder', lang)}
             rows={6}
           />
         </div>
 
         <div className="entry-field">
           <label htmlFor="prayer">
-            <h3>🙏 禱告</h3>
-            <p className="field-hint">寫下你向天父的禱告</p>
+            <h3>🙏 {t('prayer', lang)}</h3>
+            <p className="field-hint">{t('prayerHint', lang)}</p>
           </label>
           <textarea
             id="prayer"
@@ -264,7 +276,7 @@ const DayView = ({ week, day, onBack }) => {
               handleChange('prayer', e.target.value);
               handleAutoSave();
             }}
-            placeholder="親愛的天父......"
+            placeholder={t('prayerPlaceholder', lang)}
             rows={6}
           />
         </div>
@@ -273,18 +285,18 @@ const DayView = ({ week, day, onBack }) => {
       <div className="save-section">
         <div className="save-buttons">
           <button onClick={handleSave} className="save-button" disabled={isSaving}>
-            {isSaving ? '儲存中...' : '💾 手動儲存'}
+            {isSaving ? t('saving', lang) : t('manualSave', lang)}
           </button>
           {settings && settings.mentorEmail && (
             <button onClick={handleSendEmail} className="send-email-button">
-              📧 傳送給屬靈導師
+              {t('sendToMentor', lang)}
             </button>
           )}
         </div>
-        <p className="auto-save-hint">* 內容會自動儲存</p>
+        <p className="auto-save-hint">{t('autoSaveHint', lang)}</p>
         {settings && settings.mentorEmail && (
           <p className="email-hint">
-            💡 按「傳送給屬靈導師」會開啟你的電郵程式，並把今天的靈修記錄發送給 {settings.mentorName}
+            💡 {t('emailHint', lang, { name: settings.mentorName })}
           </p>
         )}
       </div>

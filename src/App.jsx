@@ -3,7 +3,8 @@ import WeekView from './components/WeekView';
 import DayView from './components/DayView';
 import SetupView from './components/SetupView';
 import OverallProgress from './components/OverallProgress';
-import { hasSettings, getOverallProgress, clearSettings } from './utils/storage';
+import { hasSettings, getOverallProgress, clearSettings, getSettings } from './utils/storage';
+import { t } from './utils/i18n';
 import './App.css';
 
 function App() {
@@ -65,7 +66,8 @@ function App() {
   };
 
   const handleResetSettings = () => {
-    if (window.confirm('確定要重設設定嗎？這會清除開始日期和屬靈導師資料，但不會刪除你的靈修記錄。')) {
+    const lang = getSettings()?.language || 'zh';
+    if (window.confirm(t('confirmReset', lang))) {
       clearSettings();
       setView('setup');
       setShowSetup(true);
@@ -81,12 +83,12 @@ function App() {
       <header className="app-header">
         <div className="header-top">
           <div className="header-title">
-            <h1>🌟 初信靈修記錄</h1>
-            <p className="subtitle">與神同行的 8 週靈修旅程</p>
+            <h1>Youth Runner 大齋期靈修</h1>
+            <p className="subtitle">{t('appSubtitle', getSettings()?.language || 'zh')}</p>
           </div>
           {hasSettings() && view !== 'setup' && (
             <button onClick={handleResetSettings} className="reset-button">
-              🔄 重設設定
+              🔄 {t('resetSettings', getSettings()?.language || 'zh')}
             </button>
           )}
         </div>
@@ -99,7 +101,11 @@ function App() {
               ></div>
             </div>
             <p className="overall-progress-text">
-              整體進度：{overallProgress.completed} / {overallProgress.total} 天（{overallPercentage}%）
+              {t('overallProgressText', getSettings()?.language || 'zh', {
+                completed: overallProgress.completed,
+                total: overallProgress.total,
+                pct: overallPercentage
+              })}
             </p>
           </div>
         )}
@@ -107,8 +113,8 @@ function App() {
 
       {view === null ? (
         <div style={{ textAlign: 'center', padding: '2rem', color: '#666', background: 'white', margin: '2rem', borderRadius: '10px' }}>
-          <h2>載入中...</h2>
-          <p>正在檢查設定...</p>
+          <h2>{t('loading', getSettings()?.language || 'zh')}</h2>
+          <p>{t('checkingSettings', getSettings()?.language || 'zh')}</p>
         </div>
       ) : showSetup ? (
         <SetupView onComplete={handleSetupComplete} />
@@ -130,7 +136,7 @@ function App() {
       )}
 
       <footer className="app-footer">
-        <p>願你在這 8 週中與神建立更深的關係 ❤️</p>
+        <p>{t('footerBlessing', getSettings()?.language || 'zh')}</p>
       </footer>
     </div>
   );

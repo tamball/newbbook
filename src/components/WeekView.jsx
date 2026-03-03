@@ -1,11 +1,13 @@
 import React from 'react';
-import { getWeekProgress, isDayCompleted } from '../utils/storage';
+import { getWeekProgress, isDayCompleted, getSettings } from '../utils/storage';
 import { devotionalData } from '../data/devotionalData';
 import { weekendData } from '../data/weekendData';
 import { getActualDate, formatDate } from '../utils/dateUtils';
+import { t } from '../utils/i18n';
 import './WeekView.css';
 
 const WeekView = ({ selectedWeek, onSelectWeek, onSelectDay }) => {
+  const lang = getSettings()?.language || 'zh';
   const weekData = devotionalData.find(w => w.week === selectedWeek);
   const progress = getWeekProgress(selectedWeek);
   const saturdayData = weekendData.saturdays.find(s => s.week === selectedWeek);
@@ -22,8 +24,8 @@ const WeekView = ({ selectedWeek, onSelectWeek, onSelectDay }) => {
     return (
       <div className="week-view">
         <div className="week-header">
-          <h1>錯誤</h1>
-          <p>找不到第 {selectedWeek} 週的資料</p>
+          <h1>{t('error', lang)}</h1>
+          <p>{t('errorNoWeekData', lang, { week: selectedWeek })}</p>
         </div>
       </div>
     );
@@ -32,7 +34,7 @@ const WeekView = ({ selectedWeek, onSelectWeek, onSelectDay }) => {
   return (
     <div className="week-view">
       <div className="week-header">
-        <h1>第 {selectedWeek} 週</h1>
+        <h1>{t('weekTitle', lang, { week: selectedWeek })}</h1>
         <div className="progress-container">
           <div className="progress-bar">
             <div className="progress-fill" style={{ width: `${(progress.completed / progress.total) * 100}%` }}></div>
@@ -47,9 +49,9 @@ const WeekView = ({ selectedWeek, onSelectWeek, onSelectDay }) => {
               </div>
             </div>
             <div className="progress-stats">
-              <p className="progress-text">已完成 {progress.completed} / {progress.total} 天</p>
+              <p className="progress-text">{t('completedDays', lang, { completed: progress.completed, total: progress.total })}</p>
               {progress.completed === progress.total && (
-                <p className="progress-complete">🎉 本週完成！</p>
+                <p className="progress-complete">{t('weekComplete', lang)}</p>
               )}
             </div>
           </div>
@@ -68,12 +70,12 @@ const WeekView = ({ selectedWeek, onSelectWeek, onSelectDay }) => {
               onClick={() => onSelectDay(dayData.day)}
             >
               <div className="day-header-row">
-                <div className="day-number">第 {dayData.day} 天 {dayDate && <span className="day-date">({dayDate.split(',')[0]})</span>}</div>
-                {completed && <span className="completion-badge">✓ 已完成</span>}
+                <div className="day-number">{t('dayLabel', lang, { day: dayData.day })} {dayDate && <span className="day-date">({dayDate.split(',')[0]})</span>}</div>
+                {completed && <span className="completion-badge">✓ {t('completed', lang)}</span>}
               </div>
-              <h3 className="day-title">{dayData.title}</h3>
+              <h3 className="day-title">{lang === 'zh' ? (dayData.titleZh ?? dayData.title) : (dayData.titleEn ?? dayData.title)}</h3>
               <div className="day-preview">
-                {dayData.scripture.split('\n')[0].substring(0, 50)}...
+                {(lang === 'zh' ? (dayData.scriptureZh ?? dayData.scripture) : (dayData.scriptureEn ?? dayData.scripture) || '').split('\n')[0]?.substring(0, 50)}...
               </div>
             </div>
           );
@@ -86,12 +88,12 @@ const WeekView = ({ selectedWeek, onSelectWeek, onSelectDay }) => {
             onClick={() => onSelectDay(6)}
           >
             <div className="day-header-row">
-              <div className="day-number">星期六 {getDayDate(6) && <span className="day-date">({getDayDate(6).split(',')[0]})</span>}</div>
-              <span className="reading-badge">📖 經文閱讀日</span>
+              <div className="day-number">{t('saturday', lang)} {getDayDate(6) && <span className="day-date">({getDayDate(6).split(',')[0]})</span>}</div>
+              <span className="reading-badge">{t('scriptureReadingDay', lang)}</span>
             </div>
-            <h3 className="day-title">📖 {saturdayData.title}</h3>
+            <h3 className="day-title">📖 {lang === 'zh' ? (saturdayData.titleZh ?? saturdayData.title) : (saturdayData.titleEn ?? saturdayData.title)}</h3>
             <div className="day-preview">
-              閱讀整章經文，無需填寫內容
+              {t('saturdayPreview', lang)}
             </div>
           </div>
         )}
@@ -103,12 +105,12 @@ const WeekView = ({ selectedWeek, onSelectWeek, onSelectDay }) => {
             onClick={() => onSelectDay(7)}
           >
             <div className="day-header-row">
-              <div className="day-number">主日 {getDayDate(7) && <span className="day-date">({getDayDate(7).split(',')[0]})</span>}</div>
-              {isDayCompleted(selectedWeek, 7) && <span className="completion-badge">✓ 已完成</span>}
+              <div className="day-number">{t('sunday', lang)} {getDayDate(7) && <span className="day-date">({getDayDate(7).split(',')[0]})</span>}</div>
+              {isDayCompleted(selectedWeek, 7) && <span className="completion-badge">✓ {t('completed', lang)}</span>}
             </div>
-            <h3 className="day-title">✝️ {sundayData.title}</h3>
+            <h3 className="day-title">✝️ {lang === 'zh' ? (sundayData.titleZh ?? sundayData.title) : (sundayData.titleEn ?? sundayData.title)}</h3>
             <div className="day-preview">
-              記錄主日崇拜的聽道筆記
+              {t('sundayPreview', lang)}
             </div>
           </div>
         )}
@@ -117,12 +119,12 @@ const WeekView = ({ selectedWeek, onSelectWeek, onSelectDay }) => {
       <div className="week-navigation">
         {selectedWeek > 1 && (
           <button onClick={() => onSelectWeek(selectedWeek - 1)} className="nav-button">
-            ← 上一週
+            {t('prevWeek', lang)}
           </button>
         )}
         {selectedWeek < 8 && (
           <button onClick={() => onSelectWeek(selectedWeek + 1)} className="nav-button">
-            下一週 →
+            {t('nextWeek', lang)}
           </button>
         )}
       </div>
